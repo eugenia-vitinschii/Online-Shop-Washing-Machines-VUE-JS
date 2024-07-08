@@ -1,0 +1,11 @@
+
+@mixin animations() {
+	transition-duration: 0.9s;
+	transition-timing-function: ease;
+}
+
+@mixin shadow() {
+	border: 2px solid $yellow;
+	box-shadow: 2px 2px 10px $yellow;
+	border-radius: $border-radius-b;
+ }
