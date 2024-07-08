@@ -1,5 +1,6 @@
 #  VUE JS (Composition API) & Pinia & AXIOS & Vue router
 (script setup)
+video https://youtu.be/puJf7eX54kQ
 > [!NOTE]
 > json-server -w db.json
 >
