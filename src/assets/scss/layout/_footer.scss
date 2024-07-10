@@ -1,0 +1,21 @@
+.footer {
+   margin-top: $margin-top;
+   background: $violet;
+   &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include sectionStyle();
+   }
+   &__links {
+      a{
+         display: block;
+   }
+   }
+   &__logo {
+      width: 150px;
+      height: 150px;
+      img{
+         width: 100%;
+      }
+   }
+ }
