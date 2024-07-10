@@ -1,24 +1,24 @@
 <template>
- 
-    <a :href="href" class="paragraph">
-      {{ link }}
-    </a>
- 
+  <a :href="href" class="body-text">
+    {{ link }}
+  </a>
 </template>
  
- <script>
-export default {
-  name: "TheLink",
-  props: {
-    link: {
-      type: String,
-    },
-    href: {
-      type: String,
-    },
-  },
-};
-</script>
  
- <style lang="scss">
-</style>
+ <script setup>
+import { defineOptions } from "vue";
+import { defineProps } from "vue";
+
+defineOptions({
+  name: "TheLink",
+});
+
+defineProps({
+  link: {
+    type: String,
+  },
+  href: {
+    type: String,
+  },
+});
+</script>

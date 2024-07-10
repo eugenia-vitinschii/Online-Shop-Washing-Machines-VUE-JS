@@ -1,0 +1,13 @@
+input,
+textarea {
+   border: 1px solid $dark-green;
+	@include input();
+	@include animations();
+}
+input::placeholder{
+   color: $dark-green
+}
+
+input:focus{
+	border: 1px solid $violet;
+}

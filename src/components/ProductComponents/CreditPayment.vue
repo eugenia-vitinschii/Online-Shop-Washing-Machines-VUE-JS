@@ -1,49 +1,68 @@
 <template>
-
-
-
-<button @click="incriment">+</button>
-   <table>
-        <tr>
-          <th>Termen luni</th>
-          <th>Avans</th>
-          <th>PLata lunara</th>
-          <th>Total</th>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td class="small-text">0</td>
-          <td class="small-text">plataLunara</td>
-          <td class="small-text">total</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td class="small-text">0</td>
-          <td class="small-text">plataLunara</td>
-          <td class="small-text">total</td>
-        </tr>
+  <p class="body-text">Cumpără {{ products.productName }} în credit: </p>
+  <p class="body-text-red">Avans : 0% </p>
+  <table class="credit__table">
+    <tr>
+      <th>Termen luni</th>
+      <th>Avans</th>
+      <th>Lunar</th>
+      <th>Total</th>
+    </tr>
+    <tr v-for="item in months" :key="item.id">
+      <td>{{ item.month }}</td>
+      <td>0 lei</td>
+      <td class="small-text">{{ getMonthlyPrice(item.month) }} lei/lunar</td>
+      <td class="small-text">{{ getPrice(item.percent) }} lei</td>
+    </tr>
   </table>
- </template>
+</template>
  
- <script>
+ 
 
+<script setup>
+import { useProductStore } from "@/stores/product";
+import { storeToRefs } from "pinia";
+import { onMounted } from "vue";
+import { useRoute } from "vue-router";
+import { defineOptions } from "vue";
 
- export default {
-    name: "CreditPayment",
-    inject:[ 'price', 'priceArr'],
-   data() {
-     return {
-      count: 0
-     };
-   },
- props:{
- },
- methods:{
+defineOptions({
+  name: "CreditPayment",
+});
+const store = useProductStore();
 
+const { getProducts } = store;
+
+const { products } = storeToRefs(store);
+
+const route = useRoute();
+
+const id = route.params.id;
+
+const months = [
+  { id: 3, month: 3, percent: 20},
+  { id: 6, month: 6, percent: 23 },
+  { id: 9, month: 9, percent: 27 },
+  { id: 12, month: 12, percent: 28 },
+  { id: 24, month: 24, percent: 33 },
+  { id: 36, month: 36, percent: 40 },
+];
+
+let price = products.value.price;
+
+let creditPrice;
+
+function getPrice(percent) {
+  creditPrice = Math.round(+price + (price * percent) / 100);
+  return creditPrice;
 }
- }
- </script>
- 
- <style>
- 
- </style>
+
+let monhlyPrice;
+function getMonthlyPrice(month) {
+  monhlyPrice = Math.round(creditPrice / month);
+  return monhlyPrice;
+}
+onMounted(() => {
+  getProducts(id);
+});
+</script>

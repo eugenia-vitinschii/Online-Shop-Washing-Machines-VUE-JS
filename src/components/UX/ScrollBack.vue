@@ -47,7 +47,7 @@
  };
  </script>
   
-  <style lang="css">
+  <style lang="scss">
  .scrollBack {
    right: 0;
    bottom: 0;
@@ -57,7 +57,7 @@
 
    margin: 20px;
    cursor: pointer;
-
+background: $dark-green;
  border: 1px solid transparent;
  }
   .scrollBack:hover {

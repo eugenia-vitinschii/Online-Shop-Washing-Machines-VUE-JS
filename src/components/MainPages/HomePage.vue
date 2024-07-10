@@ -1,74 +1,79 @@
 <template>
-  <div class="home">
+
     <div class="container">
       <div class="home__wrapper">
         <p class="heading">Home page</p>
-
-        <!-- <p class="heading">
-          Number two is: {{ $store.state.products.counter }}
-        </p>
-
-        <p class="heading" :style="{ color: $store.state.colorCode }">
-          Number is:
-
-          {{ $store.getters.myGettter }}
-        </p>
-
-        <button class="someButton" @click="$store.dispatch('increaseCounter')">
-          +
-        </button> -->
-
-        <!-- <input
-          type="text"
-          placeholder="Enter color code"
-          v-model="$store.state.colorCode"
-        /> -->
-        <p class="subheading">All products</p>
-        <div class="div" v-for="product in increaseCounter" :key="product">
-          <p class="body-text">Product name: {{ product.productName }}</p>
-          <p class="body-text">Product id {{ product.id }}</p>
-        </div>
-        <!-- <p class="subheading">test last</p>
-        <div class="div" v-for="product in getProducts" :key="product">
-          <p class="body-text">Product name: {{ product.productName }}</p>
-          <p class="body-text">Product id {{ product.id }}</p>
-        </div> -->
+      </div>
+      <!-- <the-item
+            v-for="product in checkboxFilter()"
+            :key="product.id"
+            :id="product.id"
+            :brand="product.brand"
+            :img="product.img"
+            :productName="product.productName"
+            :price="product.price"
+            :discount="product.discount"
+            :labfel="product.label"
+            :newPrice="newPrice(product.price, product.discount)"
+            :economie="saveMoney(product.price, product.discount)"
+            :monthlyPrice="monthlyPrice(product.price)"
+            :hidden="showPrices(product.discount)"
+            :onePrice="showOnePrice(product.discount)"
+            :dicountLabel="dicountLabel(product.discount)"
+            :hugeSaleLabel="hugeSaleLabel(product.discount)"
+            @addToCard="addProductCard(product)"
+          /> -->
+  </div>
+  <div class="delivery">
+    <div class="container">
+      <div class="delivery__wrapper">
+        <delivey-item
+          v-for="item in items"
+          :key="item.id"
+          :id="item.id"
+          :img="item.img"
+          :name="item.name"
+          :body="item.body"
+        />
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import { mapActions, mapGetters } from "vuex";
-export default {
-  name: "HomePage",
-  // data() {
-  //   return {};
-  // },
 
-  computed: {
-    ...mapGetters([ 'myGettter']),
-  },
-  methods: {
-    ...mapActions([  "increaseCounter"]),
-  },
-  async mounted() {
-    // this.$store.dispatch("getProductsApi")
+<script setup>
+
+import DeliveyItem from "../UI/DeliveyItem.vue";
+import { defineOptions } from "vue";
  
-    this.increaseCounter();
-  },
-};
+
+defineOptions({
+  name: "HomePage",
+});
+    const items = [
+      {
+        id: '1',
+        img: require("@/assets/img/icons8-settings-64.png"),
+        name: "Service și garanție",
+        body: "Rețea proprie de centre de servicii",
+      },
+      {
+        id: '2',
+        img: require("@/assets/img/icons8-home-64.png"),
+        name: "Livrare în toată Moldova",
+        body: "Livrarea de la 1 la 2 zile de la data comenzii",
+      },
+      {
+        id: '3',
+        img: require("@/assets/img/icons8-checkmark-64.png"),
+        name: "Încredere și fiabilitate",
+        body: "20 de ani pe piață",
+      },
+      {
+        id: '4',
+        img: require("@/assets/img/icons8-money-64.png"),
+        name: "Returnare și schimbare",
+        body: "În termen de 14 zile",
+      },
+    ];
 </script>
-
-<style>
-.div {
-  margin-top: 20px;
-  border: 1px solid white;
-}
-
-.someButton {
-  padding: 0px 20px;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-}
-</style>

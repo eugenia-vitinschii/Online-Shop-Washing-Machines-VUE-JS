@@ -1,24 +1,18 @@
 <template>
+  <div class="favorite">
+    <div class="container">
+      <div class="favorite__wrapper">
+        <p class="heading">FAVORITE PAGE</p>
+      </div>
+    </div>
+  </div>
+</template>
+ 
 
-       <div class="favorite">
-         <div class="container">
-           <div class="favorite__wrapper"></div>
-         </div>
-       </div>
+<script setup>
+import { defineOptions } from "vue";
 
- </template>
- 
- <script>
- export default {
-    name: "FavoritePage",
-    data() {
-     return {
-      products: []
-     }
-    }
- }
- </script>
- 
- <style>
- 
- </style>
+defineOptions({
+  name: "FavoritePage",
+});
+</script>

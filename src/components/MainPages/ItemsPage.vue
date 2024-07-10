@@ -1,100 +1,245 @@
 <template>
+  <div class="filters">
+    <div class="container">
+      <div class="filters___button">
+        <button class="custom__button" @click="showFilter = !showFilter">
+          Filtrează
+        </button>
+      </div>
+      <div class="filters__wrapper" v-if="showFilter">
+        <div class="filers__brand">
+          <p class="heading">Sortează după producător</p>
+          <p class="subheading" v-if="store.allProducts < 28">
+          Au fost găsite: {{ store.allProducts }} produse
+        </p>
+          <div class="item__filter-content" v-if="showFilter">
+            <div class="checkbox-wrapper">
+              <input
+                class="inp-cbx"
+                id="indesit"
+                type="checkbox"
+                value="Indesit"
+                v-model="checked"
+              />
+              <label class="cbx" for="indesit">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>INDESIT</span>
+              </label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                class="inp-cbx"
+                id="samsung"
+                type="checkbox"
+                value="Samsung"
+                v-model="checked"
+              />
+              <label class="cbx" for="samsung">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>SAMSUNG</span>
+              </label>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input
+                class="inp-cbx"
+                id="whirlpool"
+                type="checkbox"
+                value="Whirlpool"
+                v-model="checked"
+              />
+              <label class="cbx" for="whirlpool">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>WHIRLPOOL</span>
+              </label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                class="inp-cbx"
+                id="electrolux"
+                type="checkbox"
+                value="Electrolux"
+                v-model="checked"
+              />
+              <label class="cbx" for="electrolux">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>ELECTROLUX</span>
+              </label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                class="inp-cbx"
+                id="beko"
+                type="checkbox"
+                value="Beko"
+                v-model="checked"
+              />
+              <label class="cbx" for="beko">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>BEKO</span>
+              </label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                class="inp-cbx"
+                id="aeg"
+                type="checkbox"
+                value="AEG"
+                v-model="checked"
+              />
+              <label class="cbx" for="aeg">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>AEG</span>
+              </label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                class="inp-cbx"
+                id="candy"
+                type="checkbox"
+                value="Candy"
+                v-model="checked"
+              />
+              <label class="cbx" for="candy">
+                <span>
+                  <svg width="12px" height="10px" viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <span>CANDY</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="item">
     <div class="container">
-      <div class="item__wrapper">
-        <the-item
-          v-for="product in addToCard"
-          :key="product.id"
-          :id="product.id"
-          :brand="product.brand"
-          :img="product.img"
-          :productName="product.productName"
-          :price="product.price"
-          :newPrice="newPrice(product)"
-          :discount="product.discount"
-          :label="product.label"
-          :economie="eco(product)"
-          :dicountLabel="dicountLabel(product)"
-          :hugeSaleLabel="hugeSaleLabel(product)"
-        />
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
-        <div class="spaces"></div>
+      <div class="item__content">
+        <div class="item__wrapper">
+          <the-item
+            v-for="product in store.checkboxFilters"
+            :key="product.id"
+            :id="product.id"
+            :brand="product.brand"
+            :img="product.img"
+            :productName="product.productName"
+            :price="product.price"
+            :discount="product.discount"
+            :labfel="product.label"
+            :newPrice="newPrice(product.price, product.discount)"
+            :economie="saveMoney(product.price, product.discount)"
+            :monthlyPrice="monthlyPrice(product.price)"
+            :hidden="showPrices(product.discount)"
+            :onePrice="showOnePrice(product.discount)"
+            :dicountLabel="dicountLabel(product.discount)"
+            :hugeSaleLabel="hugeSaleLabel(product.discount)"
+            @addToCard="addProductCard(product)"
+          />
+          <div class="spaces"></div>
+          <div class="spaces"></div>
+          <div class="spaces"></div>
+          <div class="spaces"></div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import { mapActions, mapGetters } from "vuex";
+<script setup>
+import { defineOptions, watch } from "vue";
+import { storeToRefs } from "pinia";
+import { useProductStore } from "@/stores/product";
+import { onMounted, ref } from "vue";
+ 
 import TheItem from "../ProductComponents/TheItem.vue";
 
-export default {
-  components: { TheItem },
+defineOptions({
   name: "ItemsPage",
-  data() {
-    return {
-      number: 40,
-      products: [],
-      favorite: [],
-      card: [],
-    };
-  },
+});
 
-  methods: {
-    ...mapActions(['addToCard']),
+//Pinia store
 
-    eco(product) {
-      let newPrice = Math.floor(
-        product.price -
-          (product.price - (product.price * product.discount) / 100)
-      );
-      return newPrice;
-    },
-    newPrice(product) {
-      let eco = Math.floor(
-        product.price - (product.price * product.discount) / 100
-      );
+const store = useProductStore();
+const { checked } = storeToRefs(store);
 
-      return eco;
-    },
-    dicountLabel(product) {
-      let discount = product.discount;
-      if (discount < 100 || discount > 10) {
-        return true;
-      }
-    },
-    hugeSaleLabel(product) {
-      let discount = product.discount;
-      if (discount < 0 || discount < 0) {
-        return true;
-      }
-    },
-  },
+const {
+  fetchProducts,
+  addToCart,
+  saveMoney,
+  newPrice,
+  monthlyPrice,
+  dicountLabel,
+  hugeSaleLabel,
+  showPrices,
+  showOnePrice,
+} = store;
 
-  computed: {
-    ...mapGetters(["getCard"]),
-  },
+let showFilter = ref(false);
 
-  async mounted() {
-    // this.$store.dispatch("getProductsApi")
-    this.addToCard;
-  },
-};
+// add product to cart
+function addProductCard(product) {
+  addToCart({
+    id: product.id,
+    productCode: product.productCode,
+    productName: product.productName,
+    price: product.price,
+    discount: product.discount,
+    img: product.img,
+    brand: product.brand,
+  });
+}
+
+watch( store.checkboxFilters, () =>{
+console.log('smtg changes')
+})
+
+// get products
+onMounted(() => {
+  fetchProducts();
+});
 </script>
 
+ 
 <style lang="scss">
+p {
+  color: white;
+}
 .item__wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.cart-cont {
+  background: #ffffff;
+}
+
+.item__filter {
+  background: $white;
 }
 </style>

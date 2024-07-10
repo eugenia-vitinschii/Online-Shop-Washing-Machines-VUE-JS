@@ -1,0 +1,9 @@
+.credit__table{
+border-collapse: collapse;
+th, td {
+font-size: $body-text-sm;
+color: $dark-green;
+   text-align: left;
+   border-bottom: 1px solid $dark-green;
+ }
+}

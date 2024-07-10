@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 
 * {
 	font-family: "Dosis", sans-serif;
@@ -38,32 +37,20 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+   background: #000;
 }
 input,
 button,
 textarea {
 	font-family: inherit;
 }
-input, textarea{
-   display: block;
-	  border: 1px solid $dark-green;
-	padding: 5px;
-	margin: 5px 0px;
-	width: 100%;
-	background: $white;
-	//   @include animations();
-}
 
-// input:focus, textarea:focus{
-// 	// border: 1px solid $yellow;
-// 	// color: $yellow;
-// }
 input::-ms-clear {
 	display: none;
 }
-button, a {
+button,
+a {
 	cursor: pointer;
-	// 
 }
 button::-moz-focus-inner {
 	padding: 0;
@@ -71,17 +58,16 @@ button::-moz-focus-inner {
 }
 a,
 a:visited {
-	 color: $white;
-	text-decoration: none; 
+	text-decoration: none;
 }
-a:hover {
-	text-decoration: none; 
+button, a:hover {
+	text-decoration: none;
+	@include animations()
 }
 ul li {
- margin: 0;
+	margin: 0;
 	list-style: none;
 }
 img {
 	vertical-align: top;
 }
-

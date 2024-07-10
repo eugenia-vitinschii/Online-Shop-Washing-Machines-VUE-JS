@@ -1,0 +1,35 @@
+//colors
+$black: #000;
+$white: #fff;
+$violet: #323258;
+$dark-violet: #1b1c38;
+$light-violet: #8863d5;
+$light-green: #567a95;
+$dark-green: #1b8471;
+$red: #e50000;
+$green: #228b22;
+//sizes
+$button-text: 15px;
+$nav: 13px;
+$border-radius: 5px;
+$border-radius-b: 15px;
+$margin-top: 20px;
+$margin-sm: 10px;
+$min-margin: 1px;
+$shadow: 2px 2px 10px #454;
+
+//font sizes
+$heading: 25px;
+$heading-sm: 18px;
+
+$subheading: 18px;
+$subheading-sm: 16px;
+
+$body-text: 16px;
+$body-text-sm: 14px;
+
+$border: 1px solid $light-violet;
+button{
+   color: rgb(72, 86, 55);
+   font-style: italic;
+}

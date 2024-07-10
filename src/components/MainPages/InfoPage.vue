@@ -1,22 +1,23 @@
 <template>
        <div class="home">
          <div class="container">
-           <div class="home__wrapper"></div>
+           <div class="home__wrapper">
+            <p class="heading">Termeni și condiții</p>
+           </div>
          </div>
        </div>
 
 
  </template>
+
  
- <script>
- export default {
-    name: "InfoPage",
-    data() {
-     return {}
-    }
- }
+ <script setup>
+ import { defineOptions } from "vue";
+ 
+ 
+ defineOptions({
+   name: "InfoPage",
+ });
+ 
+ 
  </script>
- 
- <style>
- 
- </style>

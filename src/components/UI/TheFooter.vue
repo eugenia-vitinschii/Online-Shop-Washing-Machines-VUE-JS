@@ -3,21 +3,19 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__links">
+          <p class="subheading bold">Contacte:</p>
           <ul>
             <li>
-              <a href="link">Lorem</a>
+              <the-link
+                v-for="item in links"
+                :key="item.id"
+                :link="item.link"
+                :href="item.href"
+              />
             </li>
           </ul>
         </div>
-       
-        <div class="footer__info">
-          <p>Info</p>
-          <p>Info</p>
-          <p>Info</p>
-          <p>Info</p>
-
-        </div>
-         <div class="footer__logo">
+        <div class="footer__logo">
           <router-link to="/">
             <img src="@/assets/img/logo.jpg" alt="The Logo" />
           </router-link>
@@ -27,33 +25,30 @@
   </footer>
 </template>
 
+<script setup>
+import TheLink from "./UiElements/TheLink.vue"
 
-<script>
-export default {
+import { defineOptions } from "vue";
+
+defineOptions({
   name: "TheFooter",
-  data() {
-    return {};
-  },
-};
-</script>
+});
 
-<style lang="scss">
-.footer {
-  background: $violet;
-  &__wrapper {
-   display: flex;
-   justify-content: space-between;
-  }
-  &__links {
-  }
-  &__logo {
-   width: 150px;
-   height: 150px;
-   img{
-      width: 100%;
-   }
-  }
-  &__info {
-  }
-}
-</style>
+const links = [
+  {
+    id: "1",
+    link: "(373)67473233",
+    href: "tel:+(373)67-47-32-33",
+  },
+  {
+    id: "3",
+    link: "email@gmail.com",
+    href: "mailto:eugenia.vitinschaia@gmail.com",
+  },
+  {
+    id: "4",
+    link: "support@gmail.com",
+    href: "mailto:eugenia.vitinschaia@gmail.com",
+  },
+];
+</script>

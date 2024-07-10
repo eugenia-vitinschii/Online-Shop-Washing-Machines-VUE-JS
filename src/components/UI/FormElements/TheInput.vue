@@ -1,8 +1,8 @@
 <template>
   <div class="input__wrapper">
-    <label >{{ label }}</label>
+    <label>{{ label }}</label>
     <input
-    type="text"
+      type="text"
       :value="value"
       @input="$emit('update:value', $event.target.value)"
       :placeholder="placeholder"
@@ -10,29 +10,29 @@
   </div>
 </template>
    
-   <script>
-export default {
+
+<script setup>
+
+import { defineOptions } from "vue";
+import { defineProps } from "vue";
+
+defineOptions({
   name: "TheInput",
-  // data() {},
-  props: {
-   value: {
+});
+
+defineProps({
+  value: {
     type: String,
-      defaul: "",
-    },
-    label: {
-      type: String,
-      default: "",
-    },
-
-    placeholder:{
-      type: String,
-      default: "text",
-    }
+    defaul: "",
   },
-};
+  label: {
+    type: String,
+    default: "",
+  },
+
+  placeholder: {
+    type: String,
+    default: "text",
+  },
+});
 </script>
-
-
-<style lang="scss">
-
-</style>

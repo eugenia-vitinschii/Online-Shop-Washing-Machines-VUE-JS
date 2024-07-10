@@ -1,0 +1,118 @@
+.panel {
+  &__wrapper {
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $violet;
+    padding: 10px;
+  }
+  &__buttons {
+  }
+
+  &__user {
+  }
+  &__user-img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    img {
+      width: 100%;
+      border-radius: 50%;
+      border: 1px solid $dark-green;
+    }
+  }
+  &__content {
+  }
+}
+
+//table for edit products
+.edit {
+  &__content {
+    width: 100%;
+    background: #ffffff;
+  }
+  &__table {
+    width: 100%;
+  }
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+
+  padding: 15px 5px;
+}
+td {
+  text-align: center;
+  padding: 15px 5px;
+}
+//add new product
+.add {
+  &__title {
+    margin: 20px 0px;
+  }
+
+  &__content {
+  }
+  &__form {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+  }
+}
+.edit {
+  &__title {
+    margin: 20px 0px;
+  }
+
+  &__content {
+    height: 600px;
+    overflow: scroll;
+  }
+  &__table {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+  }
+}
+.update {
+  &__title {
+    margin: 20px 0px;
+  }
+
+  &__content {
+  }
+  &__form {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+  }
+}
+.message {
+  width: 100%;
+
+  background: $green;
+  padding: 40px;
+ &__wrapper{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid white;
+ padding: 2px;
+
+  @include positionCenter();
+ }
+&__svg svg{
+  width: 30px;
+  height: 30px;
+  @include positionCenter();
+  fill: $white;
+}
+  &__text {
+    padding: 10px 5px;
+    color: $white;
+    text-align: center;
+  }
+}

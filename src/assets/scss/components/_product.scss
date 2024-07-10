@@ -1,0 +1,116 @@
+
+.product{
+&__wrapper {
+   background: $white;
+   @include item()
+}
+&__wrapper:hover{
+   @include itemHover();
+   @include animations();
+  }
+&__item {
+   //item
+}
+ 
+&__short {
+   display: flex;
+   justify-content: space-around;
+}
+&__img {
+   margin-top: $margin-top;
+   min-width: 300px;
+   img{
+      width: 100%;
+   }
+}
+&__prices {
+   margin:$margin-top;
+}
+&__promo {
+}
+
+&__price {
+}
+&__price-value {
+}
+
+&__credit {
+}
+&__decription {
+   //table  
+    display: flex;   
+    
+
+   justify-content: space-between;
+   width: 100%;
+   margin: $margin-top 0px;
+   border-top: 1px solid $dark-green;
+}
+
+&__decription-table{
+
+    min-width: 50%;
+ 
+
+}
+
+}
+
+
+@media (max-width: 690px){
+
+.product{
+   &__wrapper {
+      background: $white;
+      @include item()
+   }
+   &__wrapper:hover{
+      @include itemHover();
+      @include animations();
+     }
+   &__item {
+      //item
+   }
+    
+   &__short {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+   }
+   &__img {
+       width:100%
+      img{
+        min-width: 100%;
+      }
+   }
+   &__prices {
+      margin:$margin-top;
+     max-width: 600px;
+   }
+   &__promo { 
+   } 
+   
+   &__price {
+     
+     
+   }
+   &__price-value {
+   }
+   
+   &__credit {
+   }
+   &__decription {
+      //table  
+     flex-direction: column;
+   }
+   
+   &__decription-table{
+   
+       min-width: 50%;
+    
+   
+   }
+   
+   }
+}

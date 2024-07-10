@@ -3,45 +3,55 @@
     <!-- Short info about product -->
     <div class="product__short">
       <!-- Img -->
-
       <div class="product__img">
-        <img :src="img" alt="no img"/>
+        <img :src="img" alt="no img" />
       </div>
       <div class="product__prices">
         <!-- Wrapper for Discount & Credit prices -->
         <div class="product__promo">
+          <p class="heading"> Mășină de spălat {{productName }}</p>
           <!-- Discount  Price -->
           <div class="product__price">
             <div class="product__price-value">
-              <p class="small-text price" :class="{ oneprice: hidden }">
-                {{ price }} lei
+              <p class="small-text price" :class="{ oneprice: onePrice }">
+                Preț {{ price }} lei
               </p>
               <p class="body-text red" :class="{ hidden: hidden }">
-                <span class="bold">{{ newPrice }} lei</span>
+              Preț nou {{ newPrice }} lei
               </p>
             </div>
-            <div class="product__price-value">
-              <p class="small-text" :class="{ hidden: hidden }">
+            <div class="product__price-value" :class="{ hidden: hidden }">
+              <p class="small-text">
                 Reducere <span class="bold">{{ discount }}%</span>
               </p>
-              <p class="small-text" :class="{ hidden: hidden }">
-                Economie <span class="bold">{{ economie }}lei </span>
+              <p class="small-text">
+                Economie <span class="bold">{{ economie }}lei! </span>
               </p>
             </div>
+          </div>
+          <div class="product__credit">
+            <p class="body-text">
+              De la <span class="bold">{{ monthlyPrice }} lei </span> /lunar
+            </p>
           </div>
         </div>
         <!-- Price credit  -->
         <div class="product__credit">
-          <the-button v-for="tab in tabs" :key="tab" @click="currentTab = tab">
-            {{ credits }}
+          <the-button
+            v-for="item in testCredit"
+            :key="item"
+            :class="['custom__button', { active: currentTab === item.tab }]"
+            @click="currentTab = item.tab"
+          >
+            {{ item.name }}
           </the-button>
+          
           <component :is="currentTab" />
         </div>
       </div>
     </div>
     <div class="product__decription">
-      <p class="subheading"></p>
-      <table>
+      <table class="product__decription-table">
         <tr>
           <th>Informația despre produs</th>
           <th></th>
@@ -89,7 +99,9 @@
         <tr>
           <td>Numărul de programe</td>
           <td>{{ numberOfPrograms }}</td>
-        </tr>
+        </tr>        
+      </table>
+      <table class="product__decription-table">
         <tr>
           <th>Dimensiuni</th>
           <th></th>
@@ -127,145 +139,130 @@
   </div>
 </template>
  
- <script>
+
+<script setup>
+import { defineOptions } from "vue";
+
 import TheButton from "../UI/UiElements/TheButton.vue";
-import CreditPayment from "./CreditPayment.vue";
 import InstallmentPayment from "./InstallmentPayment.vue";
-export default {
-  components: { TheButton, CreditPayment, InstallmentPayment },
+import CreditPayment from "./CreditPayment.vue";
+import { defineProps, ref } from "vue";
+
+defineOptions({
   name: "TheProduct",
+});
 
-  // provide(){
-  //   return {
-  //     price: this.getPrice(),
-  //     priceArr:this.getPricet(),
-  //   }
-  // },
-  data() {
-    return {
-      credits: {
-        credit: 'credit',
-        avans:' avans'
-      },
-      hidden: false,
-      currentTab: "",
-      tabs: ["InstallmentPayment", "CreditPayment"],
-    };
-  },
+const currentTab = ref("InstallmentPayment");
 
-  props: {
-    id: {
-      type: String,
-    },
-    productCode: {
-      type: String,
-    },
-    img: {
-      type: String,
-    },
-    productName: {
-      type: String,
-    },
-    price: {
-      type: Number,
-      default: 0,
-    },
-    discount: {
-      type: Number,
-      default: 0,
-    },
-    brand: {
-      type: String,
-    },
-    waterConsumption: {
-      type: String,
-    },
-    energyEfficiencyClass: {
-      type: String,
-    },
-    type: {
-      type: String,
-    },
-    spinSpeed: {
-      type: String,
-    },
-    loadCapacity: {
-      type: String,
-    },
-    noiseLevelCentrifugation: {
-      type: String,
-    },
-    noiseLevelWashing: {
-      type: String,
-    },
-    typeControl: {
-      type: String,
-    },
-    numberOfPrograms: {
-      type: String,
-    },
-    weightInPackage: {
-      type: String,
-    },
-    depth: {
-      type: String,
-    },
-    weight: {
-      type: String,
-    },
-    color: {
-      type: String,
-    },
-    countryOfAssembly: {
-      type: String,
-    },
-    guarantee: {
-      type: String,
-    },
-    newPrice: {
-      type: Number,
-    },
-    economie: {
-      type: Number,
-      default: null,
-    },
-    totalCreditPrice: {
-      type: Number,
-      default: null,
-    },
+const testCredit = [
+  {
+    tab: InstallmentPayment,
+    name: "În rate",
   },
-  methods: {
-    //   getPrice(){
-    //     const price =  Number(this.price)
-    //  return price
-    //   },
-    //   getPricet(){
-    //     const price = Number(this.newPrice)
-    //  return price
-    //   },
+  {
+    tab: CreditPayment,
+    name: "Credit",
   },
-};
+];
+
+defineProps({
+  test:{
+    type: String,
+  },
+  id: {
+    type: String,
+  },
+  productCode: {
+    type: String,
+  },
+  img: {
+    type: String,
+  },
+  productName: {
+    type: String,
+  },
+  price: {
+    type: Number,
+    default: 0,
+  },
+  discount: {
+    type: Number,
+    default: 0,
+  },
+  brand: {
+    type: String,
+  },
+  waterConsumption: {
+    type: String,
+  },
+  energyEfficiencyClass: {
+    type: String,
+  },
+  type: {
+    type: String,
+  },
+  spinSpeed: {
+    type: String,
+  },
+  loadCapacity: {
+    type: String,
+  },
+  noiseLevelCentrifugation: {
+    type: String,
+  },
+  noiseLevelWashing: {
+    type: String,
+  },
+  typeControl: {
+    type: String,
+  },
+  numberOfPrograms: {
+    type: String,
+  },
+  weightInPackage: {
+    type: String,
+  },
+  depth: {
+    type: String,
+  },
+  weight: {
+    type: String,
+  },
+  color: {
+    type: String,
+  },
+  countryOfAssembly: {
+    type: String,
+  },
+  guarantee: {
+    type: String,
+  },
+  newPrice: {
+    type: Number,
+  },
+  economie: {
+    type: Number,
+    default: null,
+  },
+  totalCreditPrice: {
+    type: Number,
+    default: null,
+  },
+  hidden: {
+    type: Boolean,
+    default: false,
+  },
+  onePrice: {
+    type: Boolean,
+    default: false,
+  },
+  monthlyPrice: {
+    type: Number,
+    default: null,
+  }
+});
 </script>
- 
- <style lang="scss">
-.product {
-  background: #ffffff;
-  &__item {
-  }
-  &__short {
-    display: flex;
-    justify-content: space-around;
-  }
-  &__img {
-  }
-  &__prices {
-  }
-  &__promo {
-    width: 600px;
-  }
-  &-short-promo {
-  }
-  &__decription {
-  }
-}
-</style>
+
+
+
+

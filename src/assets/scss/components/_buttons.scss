@@ -1,0 +1,33 @@
+.custom__button,
+.red__button,
+.green__button {
+   @include button();
+}
+.custom__button {
+   border: 1px solid $dark-green;
+   color: $dark-green;
+}
+.red__button {
+   border: 1px solid $red;
+   color: $red;
+}
+.green__button {
+   border: 1px solid $green;
+   color: $green;
+}
+.red__button:hover {
+   background: $red;
+   color: white;
+}
+.green__button:hover {
+   background: $green;
+   color: white;
+}
+.custom__button:hover {
+   color: white;
+   background: $dark-green;
+}
+.custom__button:active{
+   color: rgb(65, 65, 65);
+   background:rgb(65, 65, 65)
+}

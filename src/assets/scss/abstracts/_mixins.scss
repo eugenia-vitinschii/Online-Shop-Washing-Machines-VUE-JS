@@ -1,0 +1,107 @@
+@mixin animations() {
+	transition-duration: 0.9s;
+	transition-timing-function: ease;
+}
+
+@mixin shadow() {
+	border: 2px solid $white;
+	box-shadow: 2px 2px 10px $white;
+	border-radius: $border-radius-b;
+}
+
+@mixin button() {
+	text-align: center;
+	padding: 5px 10px;
+	margin: 5px 5px 5px 10px;
+	cursor: pointer;
+	font-size: $body-text-sm;
+	background: transparent;
+}
+@mixin input(){
+	display: block;
+	padding: 5px;
+	margin: 5px 0px;
+	width: 100%;
+	background: $white;
+	color: $violet;
+	font-size: $body-text-sm;
+}
+
+@mixin positionCenter(){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+ }
+
+ @mixin sectionStyle(){
+	padding: 20px 10px;
+	margin: 10px 0px 0px 0px;
+ }
+
+ @mixin sectionItemStyle(){
+	padding: 20px 10px;
+	margin: 5px;
+ }
+
+
+
+ @mixin animatePromo(){
+	animation: animatePromoKey 2s ease 0s infinite normal none;
+ }
+ @keyframes animatePromoKey  {
+	0% {
+	 animation-timing-function: ease-out;
+	 transform: scale(1);
+	 transform-origin: center center;
+	}
+ 
+	10% {
+	 animation-timing-function: ease-in;
+	 transform: scale(0.91);
+	}
+ 
+	17% {
+	 animation-timing-function: ease-out;
+	 transform: scale(0.98);
+	}
+ 
+	33% {
+	 animation-timing-function: ease-in;
+	 transform: scale(0.87);
+	}
+ 
+	45% {
+	 animation-timing-function: ease-out;
+	 transform: scale(1);
+	}
+ }
+
+
+ @mixin item(){
+	background: $white;
+	padding: 0px 10px;
+	box-shadow: 2px 2px 10px transparent;
+	border: 1px solid $dark-violet;
+	border-radius: $border-radius-b;
+ }
+ @mixin itemHover(){
+	box-shadow: 2px 2px 10px $white;
+ }
+@mixin itemStyles(){
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 210px;
+	max-width: 250px;
+	min-width: 150px;
+	flex: 1 1 200px;
+	border-radius: 5px;
+	margin: 10px;
+}
+ @mixin cartItem(){
+	background: $white;
+	width: 600px;
+	margin: 10px;
+	padding: 10px;
+ }

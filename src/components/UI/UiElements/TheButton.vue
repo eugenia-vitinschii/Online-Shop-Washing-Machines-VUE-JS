@@ -1,15 +1,12 @@
 <template>
-   <button class="custom__button"><slot></slot>
-   </button>
+  <button class="custom__button"><slot></slot></button>
 </template>
 
 
-<script>
-export default {
-   name: "BlackButton",
-   data(){
-      return{}
-   }
-}
+<script setup>
+import { defineOptions } from "vue";
 
+defineOptions({
+  name: "TheButton",
+});
 </script>

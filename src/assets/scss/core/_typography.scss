@@ -1,0 +1,31 @@
+// Font styles && classes
+.heading, .subheading, .body-text  {
+	color:$dark-green;
+	margin: 5px 0px;
+
+}
+.heading{
+font-size: $heading;
+}
+.subheading {
+	font-size: $subheading;
+}
+
+.body-text , .body-text-red{
+	font-size: $body-text;
+}
+.body-text-red{
+	color: $red;
+}
+.small-text{
+	font-size: 14;
+	color: #000000;
+}
+
+.bold{
+	font-weight: bold;
+}
+.red{
+	color: $red;
+}
+

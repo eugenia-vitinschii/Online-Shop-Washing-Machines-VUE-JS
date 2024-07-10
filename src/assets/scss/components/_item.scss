@@ -1,0 +1,172 @@
+.item {
+   &__item{
+    @include item();
+   }
+   &__item:hover{
+    @include itemHover();
+    @include animations();
+   }
+   &__content{
+    // display: flex;
+   }
+   &__item,
+   .spaces {
+@include itemStyles()
+   }
+   &__top {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     padding: 10px 10px;
+     align-items: center;
+     height: 50px;
+   }
+   &__logo {
+     height: 25px;
+     img {
+       height: 100%;
+     }
+   }
+   &__labels{
+    background: #000;
+   }
+   &__label {
+     height: 35px;
+     display: none;
+     @include animatePromo();
+     img {
+       border-radius: 50%;
+       height: 100%;
+     }
+   }
+ 
+   &__label-txt {
+     text-align: center;
+     color: red;
+   }
+   &__links {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   &__img {
+     align-self: center;
+     width: 150px;
+     height: 220px;
+     overflow: hidden;
+
+     img {
+       width: 100%;
+     }
+   }
+   &__price {
+    width: 100%;
+    height: 40px;
+     display: flex;
+     justify-content: space-between;
+
+   }
+   &__price-value {
+   }
+   &__buttons {
+    margin-top: $margin-top;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+   }
+ }
+ 
+ .price {
+   text-decoration: line-through;
+   color: $light-green;
+ }
+ 
+ .new-price {
+   font-size: 20px;
+   color: rgb(189, 30, 30);
+ }
+ 
+ .bold {
+   font-weight: bold;
+ }
+ .hidden{
+  display: none;
+ }
+ .visible {
+   display: block;
+ }
+ .brand{
+  text-transform: uppercase;
+   color: $black
+ }
+ .oneprice {
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: bold;
+ }
+ button {
+   background: $white;
+ }
+ #card {
+   fill: $dark-green;
+   height: 30px;
+   width: 30px;
+   @include  animations();
+ }
+ #card:hover {
+   fill: $dark-violet;
+   height: 30px;
+   width: 30px;
+ }
+ #heart {
+  fill: $red;
+   opacity: 0.1;
+   margin-left: 60px;
+
+ }
+ #heart
+ .active {
+  opacity: 1;
+ }
+ .getFavorite {
+   fill: red;
+ }
+ .heart {
+  fill: $dark-violet;
+ }
+
+ .spaces {
+   height: 1px;
+   padding: 1px;
+   background: transparent;
+   border: 0px solid transparent;
+ }
+
+.redHeart{
+  fill: $dark-violet;
+}
+
+ .oneprice{
+  text-decoration: none;
+  color: $black;
+font-size: $body-text;
+font-weight: bold;
+ }
+ @media (max-width:667px){
+	.item {
+    &__item{
+
+	max-width: 350px;
+
+}
+}
+ }
+ @media (max-width:470px){
+  .item {
+    &__item{
+    min-width: 100%;
+   margin: 10px  0px;
+    }
+  }
+ }

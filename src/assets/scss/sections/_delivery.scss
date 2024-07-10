@@ -1,0 +1,31 @@
+.delivery {
+   background: $light-green;
+   &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @include sectionStyle();
+   }
+   &__item {
+      align-self: center;
+      @include sectionItemStyle();
+      height: 170px;
+      background: $white;
+   }
+   &__img {
+      width: 60px;
+      @include positionCenter();
+      img {
+         width: 100%;
+      }
+   }
+   &__text {
+      text-align: center;
+   }
+}
+@media (max-width: 600px) {
+   .delivery {
+      &__wrapper {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+}
