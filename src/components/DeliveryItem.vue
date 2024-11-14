@@ -15,7 +15,7 @@ import { defineOptions } from "vue";
 import { defineProps } from "vue";
 
 defineOptions({
-  name: "DeliveyItem",
+  name: "DeliveryItem",
 });
 
 defineProps({

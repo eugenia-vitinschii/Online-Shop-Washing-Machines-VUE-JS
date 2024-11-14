@@ -1,4 +1,5 @@
 <template>
+<!-- shopping card view -->
   <div class="cart">
     <div class="container">
       <div class="cart__wrapper">
@@ -14,6 +15,7 @@
           <p class="heading">Coș ({{ user.cart.length }})</p>
         </div>
         <div class="cart__items">
+          <!-- shopping card item  -->
           <shopping-item
             v-for="item in user.cart"
             :key="item.id"
@@ -32,15 +34,17 @@
 </template>
 
  <script setup>
-import ShoppingItem from "@/components/ProductComponents/ShoppingItem.vue";
+//compoents
+import ShoppingItem from "@/components/ShoppingItem.vue";
 
 import { defineOptions } from "vue";
  
+// store
 import { useProductStore } from "@/stores/product";
 import { storeToRefs } from "pinia";
 
 defineOptions({
-  name: "ShoppingCard",
+  name: "ShoppingCardView",
 });
 const store = useProductStore();
 

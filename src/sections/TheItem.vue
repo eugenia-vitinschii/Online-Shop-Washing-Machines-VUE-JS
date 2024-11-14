@@ -86,9 +86,8 @@
 
 
 <script setup>
-import { defineOptions } from "vue";
-import { defineProps } from "vue";
-
+//vue
+import { defineOptions,defineProps  } from "vue";
 
 defineOptions({
   name: "TheItem",

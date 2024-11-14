@@ -141,10 +141,10 @@
 
 <script setup>
 
-import TheButton from "@/components/UI/UiElements/TheButton.vue";
-import TheInput from "@/components/UI/FormElements/TheInput.vue";
-import AdminHeader from "../AdminComponents/AdminHeader.vue";
-import MessageComponent from "../AdminComponents/MessageComponent.vue";
+import TheButton from "@/components/TheButton.vue";
+import TheInput from "@/components/TheInput.vue";
+import AdminHeader from "@/components/Admin/AdminHeader.vue";
+import MessageComponent from "@/components/Admin/MessageComponent.vue";
 
 
 import { useProductStore } from "@/stores/product";
@@ -156,7 +156,7 @@ import {ref} from 'vue';
 
 
 defineOptions({
-  name: "UpdateProduct",
+  name: "UpdateView",
   inheritAttrs: false,
 });
 

@@ -137,21 +137,19 @@
   
 
 <script setup>
-import { defineOptions } from "vue";
- 
+//vue
+import { defineOptions, ref } from "vue";
+// componets
+import TheInput from "@/components/TheInput.vue";
+import TheButton from "@/components/TheButton.vue";
+import AdminHeader from "@/components/Admin/AdminHeader.vue";
+
+// store
+import {useProductStore  } from "@/stores/product";
 
 defineOptions({
-  name: "AddProduct",
+  name: "AddProductView",
   });
-
-import TheInput from "@/components/UI/FormElements/TheInput.vue";
- 
-import TheButton from "@/components/UI/UiElements/TheButton.vue";
-import AdminHeader from "../AdminComponents/AdminHeader.vue";
-
-import {useProductStore  } from "@/stores/product";
-import { ref } from "vue";
-
 
 const store = useProductStore ();
 const { createProduct } = store;

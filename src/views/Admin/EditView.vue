@@ -41,8 +41,8 @@
 
 
 <script setup>
-import MessageComponent from "../AdminComponents/MessageComponent.vue";
-import AdminHeader from "../AdminComponents/AdminHeader.vue";
+import MessageComponent from "@/components/Admin/MessageComponent.vue";
+import AdminHeader from "@/components/Admin/AdminHeader.vue";
 
  
 
@@ -53,7 +53,7 @@ import { onMounted } from "vue";
 import { defineOptions } from "vue";
 
 defineOptions({
-  name: "EditProduct",
+  name: "EditView",
   inheritAttrs: false,
 });
 

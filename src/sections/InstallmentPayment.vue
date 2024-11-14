@@ -19,16 +19,17 @@
 
 
 <script setup>
+//vue
+import { defineOptions, onMounted } from "vue";
+import { useRoute } from "vue-router";
+//store
 import { useProductStore } from "@/stores/product";
 import { storeToRefs } from "pinia";
-import { onMounted } from "vue";
-import { useRoute } from "vue-router";
-
-import { defineOptions } from "vue";
 
 defineOptions({
   name: "InstallmentPayment",
 });
+
 const store = useProductStore();
 
 const { getProducts } = store;

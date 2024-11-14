@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import TheLink from "./UiElements/TheLink.vue"
+import TheLink from "../components/TheLink.vue"
 
 import { defineOptions } from "vue";
 

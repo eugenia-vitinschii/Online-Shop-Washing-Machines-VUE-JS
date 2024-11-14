@@ -1,11 +1,12 @@
 <template>
+<!-- a component -->
   <a :href="href" class="body-text">
     {{ link }}
   </a>
 </template>
  
- 
- <script setup>
+<script setup>
+
 import { defineOptions } from "vue";
 import { defineProps } from "vue";
 

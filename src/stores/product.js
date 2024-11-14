@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import axios from "axios"
- import router from '@/components/routes';
+ import router from '@/router/routes';
 
 const baseUrl = 'http://localhost:3000'
 

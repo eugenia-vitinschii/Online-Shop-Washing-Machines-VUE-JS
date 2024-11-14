@@ -28,11 +28,10 @@
      
     
 <script setup>
-import { defineOptions } from "vue";
-import { defineModel } from "vue";
+import { defineOptions, defineModel } from "vue";
 // import {ref} from 'vue'
-import TheInput from "@/components/UI/FormElements/TheInput.vue";
-import TheButton from "@/components/UI/UiElements/TheButton.vue";
+import TheInput from "@/components/TheInput.vue";
+import TheButton from "@/components/TheButton.vue";
 
 import { useProductStore } from "@/stores/product";
 
@@ -43,7 +42,7 @@ const { login } = store;
  
 
 defineOptions({
-  name: "AdminLogin",
+  name: "AdminLoginView",
 });
 
 // let name = ref()

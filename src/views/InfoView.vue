@@ -15,7 +15,7 @@
  
  
  defineOptions({
-   name: "InfoPage",
+   name: "InfoView",
  });
  
  

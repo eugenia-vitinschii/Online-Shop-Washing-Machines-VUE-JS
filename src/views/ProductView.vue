@@ -1,7 +1,9 @@
 <template>
+<!-- product view -->
   <div class="product">
     <div class="container">
       <div class="product__wrapper">
+        <!-- product component -->
         <the-product
           :id="products.id"
           :productCode="products.productCode"
@@ -39,25 +41,29 @@
  
 
 <script setup>
+//components
+import TheProduct from "@/sections/TheProduct.vue";
+//vue
 import { defineOptions } from "vue";
-import TheProduct from "./TheProduct.vue";
-import { useProductStore } from "@/stores/product";
-import { storeToRefs } from "pinia";
 import { onMounted  } from "vue";
 import { useRoute } from "vue-router";
-
- 
+//store
+import { useProductStore } from "@/stores/product";
+import { storeToRefs } from "pinia";
 
 defineOptions({
-  name: "ProductPage",
+  name: "ProductView",
 });
  
+//pinia
 const store = useProductStore();
 const route = useRoute();
 const id = route.params.id
 const { products } = storeToRefs(store);
 const { getProducts, saveMoney, newPrice , monthlyPrice } = store;
 
+
+//functions
 function showPrices(products){
     if(products.discount<  1 || products.discount > 99 ){
     return  true
@@ -69,14 +75,9 @@ function showOnePrice(products){
   }
 }
  
- 
- 
- 
-
+//hooks
 onMounted(() => {
   getProducts(id);
 });
-
-
 
 </script>

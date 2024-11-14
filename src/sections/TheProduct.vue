@@ -141,12 +141,12 @@
  
 
 <script setup>
-import { defineOptions } from "vue";
-
-import TheButton from "../UI/UiElements/TheButton.vue";
+//vue
+import { defineOptions, defineProps, ref } from "vue";
+//components
+import TheButton from "../components/TheButton.vue";
 import InstallmentPayment from "./InstallmentPayment.vue";
 import CreditPayment from "./CreditPayment.vue";
-import { defineProps, ref } from "vue";
 
 defineOptions({
   name: "TheProduct",

@@ -1,15 +1,16 @@
 <template>
   <the-header />
-  <div class="content"></div>
+  <div class="content">
   <router-view></router-view>
+  </div>
   <the-footer />
   <scroll-back />
 </template>
 
 <script>
-import TheFooter from "./components/UI/TheFooter.vue";
-import TheHeader from "./components/UI/TheHeader.vue";
-import ScrollBack from "./components/UX/ScrollBack.vue";
+import TheFooter from "./layout/TheFooter.vue";
+import TheHeader from "./layout/TheHeader.vue";
+import ScrollBack from "./layout/ScrollBack.vue";
 
 export default {
   name: "app",

@@ -172,15 +172,18 @@
 </template>
 
 <script setup>
+//vue
 import { defineOptions, watch } from "vue";
+import { onMounted, ref } from "vue";
+
+//store
 import { storeToRefs } from "pinia";
 import { useProductStore } from "@/stores/product";
-import { onMounted, ref } from "vue";
- 
-import TheItem from "../ProductComponents/TheItem.vue";
+//components
+import TheItem from "@/sections/TheItem.vue";
 
 defineOptions({
-  name: "ItemsPage",
+  name: "ItemsView",
 });
 
 //Pinia store
@@ -219,13 +222,12 @@ watch( store.checkboxFilters, () =>{
 console.log('smtg changes')
 })
 
-// get products
+//hooks
 onMounted(() => {
   fetchProducts();
 });
 </script>
 
- 
 <style lang="scss">
 p {
   color: white;

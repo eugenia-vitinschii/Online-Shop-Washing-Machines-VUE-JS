@@ -13,6 +13,6 @@
 import { defineOptions } from "vue";
 
 defineOptions({
-  name: "FavoritePage",
+  name: "FavoriteView",
 });
 </script>

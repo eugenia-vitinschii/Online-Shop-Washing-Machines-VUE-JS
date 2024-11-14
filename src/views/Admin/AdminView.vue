@@ -7,11 +7,11 @@
  
  
 <script setup>
-import AdminHeader from "../AdminComponents/AdminHeader.vue";
+import AdminHeader from "@/components/Admin/AdminHeader.vue";
 import { defineOptions } from "vue";
 
 
 defineOptions({
-  name: "AdminPanel",
+  name: "AdminView",
 });
 </script>
