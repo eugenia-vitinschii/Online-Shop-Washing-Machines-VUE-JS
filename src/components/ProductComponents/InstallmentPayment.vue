@@ -17,15 +17,6 @@
   </table>
 </template>
 
-<script>
-
-
- 
-export default {
-   name: "InstallmentPayment",
- 
-}
-</script>
 
 <script setup>
 import { useProductStore } from "@/stores/product";

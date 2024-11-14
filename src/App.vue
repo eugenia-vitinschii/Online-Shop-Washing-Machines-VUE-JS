@@ -1,12 +1,8 @@
 <template>
-  <div class="wrapper">
-    
-    <div class="content">
-      <the-header/>
-      <router-view></router-view>
-    </div>
-    <the-footer/>
-  </div>
+  <the-header />
+  <div class="content"></div>
+  <router-view></router-view>
+  <the-footer />
   <scroll-back />
 </template>
 
@@ -26,6 +22,4 @@ export default {
 </script>
 
 <style>
-
-
 </style>

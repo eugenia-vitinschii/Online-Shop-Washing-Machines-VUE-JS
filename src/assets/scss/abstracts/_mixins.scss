@@ -23,7 +23,7 @@
 	margin: 5px 0px;
 	width: 100%;
 	background: $white;
-	color: $violet;
+	color: $blue;
 	font-size: $body-text-sm;
 }
 
@@ -81,7 +81,7 @@
 	background: $white;
 	padding: 0px 10px;
 	box-shadow: 2px 2px 10px transparent;
-	border: 1px solid $dark-violet;
+	border: 1px solid $light-gray;
 	border-radius: $border-radius-b;
  }
  @mixin itemHover(){

@@ -5,7 +5,7 @@
         <div class="header__content">
           <div class="header__logo">
             <router-link to="/">
-              <img src="@/assets/img/logo.jpg" alt="The Logo" />
+              <img src="@/assets/img/logo-header.jpg" alt="The Logo" />
             </router-link>
           </div>
           <nav class="header__links">

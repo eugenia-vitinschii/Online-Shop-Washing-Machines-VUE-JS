@@ -115,7 +115,7 @@
    @include  animations();
  }
  #card:hover {
-   fill: $dark-violet;
+   fill: $blue;
    height: 30px;
    width: 30px;
  }
@@ -133,7 +133,7 @@
    fill: red;
  }
  .heart {
-  fill: $dark-violet;
+  fill: $blue;
  }
 
  .spaces {
@@ -144,7 +144,7 @@
  }
 
 .redHeart{
-  fill: $dark-violet;
+  fill: $blue;
 }
 
  .oneprice{

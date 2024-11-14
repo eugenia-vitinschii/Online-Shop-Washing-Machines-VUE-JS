@@ -1,12 +1,15 @@
 .footer {
    margin-top: $margin-top;
-   background: $violet;
+   background: $blue;
    &__wrapper {
     display: flex;
     justify-content: space-between;
     @include sectionStyle();
    }
    &__links {
+      a, p{
+         color: white
+      }
       a{
          display: block;
    }

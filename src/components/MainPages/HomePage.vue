@@ -4,25 +4,6 @@
       <div class="home__wrapper">
         <p class="heading">Home page</p>
       </div>
-      <!-- <the-item
-            v-for="product in checkboxFilter()"
-            :key="product.id"
-            :id="product.id"
-            :brand="product.brand"
-            :img="product.img"
-            :productName="product.productName"
-            :price="product.price"
-            :discount="product.discount"
-            :labfel="product.label"
-            :newPrice="newPrice(product.price, product.discount)"
-            :economie="saveMoney(product.price, product.discount)"
-            :monthlyPrice="monthlyPrice(product.price)"
-            :hidden="showPrices(product.discount)"
-            :onePrice="showOnePrice(product.discount)"
-            :dicountLabel="dicountLabel(product.discount)"
-            :hugeSaleLabel="hugeSaleLabel(product.discount)"
-            @addToCard="addProductCard(product)"
-          /> -->
   </div>
   <div class="delivery">
     <div class="container">

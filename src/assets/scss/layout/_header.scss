@@ -1,6 +1,5 @@
 .header {
-   background: $violet;
-   margin-top: -100px;
+   background: $blue;
    margin-bottom: 50px;
  
    &__content {
@@ -11,7 +10,6 @@
    }
    &__logo {
      width: 150px;
-     height: 75px;
      img {
        width: 100%;
      }
