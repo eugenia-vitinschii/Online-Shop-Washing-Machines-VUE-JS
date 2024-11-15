@@ -1,11 +1,7 @@
 <template>
-<p class="heading">
-   home page
-</p>
-  <div class="delivery">
+<div class="delivery">
     <div class="container">
       <div class="delivery__wrapper">
-         <p class="heading">HOME</p>
         <delivery-item
           v-for="item in items"
           :key="item.id"

@@ -9,11 +9,16 @@
             </router-link>
           </div>
           <nav class="header__links">
-            <ul>
+            <ul> 
               <li>
                 <router-link class="header__link" to="/admin-panel"
                   >Admin</router-link>
               </li>
+              <li>
+                <router-link class="header__link" to="/"
+                  >Home</router-link>
+              </li>
+             
               <!-- <li>
                 <router-link class="header__link" to="/">Acasă</router-link>
               </li> -->

@@ -1,7 +1,7 @@
 .checkbox-wrapper {
    margin-top: 10px;
    label{
-      color: $blue;
+      color: $orange;
    }
    input[type="checkbox"] {
       display: none;
@@ -25,7 +25,7 @@
       border-radius: 3px;
       transform: scale(1);
       vertical-align: middle;
-      border: 1px solid $blue;
+      border: 1px solid $orange;
       transition: all 0.2s ease;
    }
    .cbx span:first-child svg {
@@ -47,7 +47,7 @@
       content: "";
       width: 100%;
       height: 100%;
-      background: $blue;
+      background: $orange;
       display: block;
       transform: scale(0);
       opacity: 1;
