@@ -1,4 +1,11 @@
 <template>
+<div class="swiper">
+  <div class="container">
+    <div class="swiper__wrapper">
+      <the-slider/>
+    </div>
+  </div>
+</div>
 <div class="delivery">
     <div class="container">
       <div class="delivery__wrapper">
@@ -17,8 +24,13 @@
 
 
 <script setup>
-import DeliveryItem from "@/components/DeliveryItem.vue"
+//vue
 import { defineOptions } from "vue";
+
+//import components
+import DeliveryItem from "@/components/DeliveryItem.vue"
+import TheSlider  from "@/sections/TheSlider.vue";
+ 
 
 defineOptions({
   name: "HomeView",
@@ -27,25 +39,25 @@ defineOptions({
 const items = [
   {
     id: "1",
-    img: require("@/assets/img/icons8-settings-64.png"),
+    img: require("@/assets/img/delivery-1.svg"),
     name: "Service și garanție",
     body: "Rețea proprie de centre de servicii",
   },
   {
     id: "2",
-    img: require("@/assets/img/icons8-home-64.png"),
+    img: require("@/assets/img/delivery-2.svg"),
     name: "Livrare în toată Moldova",
     body: "Livrarea de la 1 la 2 zile de la data comenzii",
   },
   {
     id: "3",
-    img: require("@/assets/img/icons8-checkmark-64.png"),
+    img: require("@/assets/img/delivery-3.svg"),
     name: "Încredere și fiabilitate",
     body: "20 de ani pe piață",
   },
   {
     id: "4",
-    img: require("@/assets/img/icons8-money-64.png"),
+    img: require("@/assets/img/delivery-4.svg"),
     name: "Returnare și schimbare",
     body: "În termen de 14 zile",
   },

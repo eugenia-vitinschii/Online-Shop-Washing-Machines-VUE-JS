@@ -1,6 +1,11 @@
 .item {
-   &__item{
+
+   &__item{  
     @include item();
+    background-image: url('/src/assets/img/wave.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
    }
    &__item:hover{
     @include itemHover();
@@ -74,12 +79,16 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    background: transparent;
+    button{
+      background: transparent;
+    }
    }
  }
  
  .price {
    text-decoration: line-through;
-   color: $light-green;
+   color: $white;
  }
  
  .new-price {
