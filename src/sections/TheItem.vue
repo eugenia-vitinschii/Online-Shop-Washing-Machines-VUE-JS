@@ -23,7 +23,7 @@
         </div>
       </router-link>
       <router-link :to="'/product/' + id">
-        <p class="body-text">Mășină de spălat {{ productName }}</p>
+        <p class="body-text">{{ productName }}</p>
       </router-link>
     </div>
     <!-- Prices blocks -->

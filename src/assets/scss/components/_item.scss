@@ -2,10 +2,6 @@
 
    &__item{  
     @include item();
-    background-image: url('/src/assets/img/wave.svg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
    }
    &__item:hover{
     @include itemHover();

@@ -5,7 +5,7 @@
     <div class="container">
     <div class="add__title">
       <p class="heading">
-        Adauga produs nou: Mășină de spălat {{ postProducts.productName }}
+        Adauga produs nou:{{ postProducts.productName }}
       </p>
     </div>
     <div class="add__content">

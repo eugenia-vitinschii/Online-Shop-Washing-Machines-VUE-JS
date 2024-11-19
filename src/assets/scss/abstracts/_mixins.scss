@@ -104,3 +104,17 @@
 	margin: 10px;
 	padding: 10px;
  }
+
+
+ //fs colos
+@mixin font-style( $color, $padding-top, $text-align){
+color: $color;
+padding-top: $padding-top;
+text-align: $text-align;
+}
+
+//fs
+@mixin font-size($font-size, $line-height){
+	font-size: $font-size;
+	line-height: $line-height;
+}

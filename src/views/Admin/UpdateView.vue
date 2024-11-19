@@ -4,7 +4,7 @@
     <div class="update">
       <div class="update__title">
         <p class="heading">
-          Editeaza produsul Mășină de spălat {{ products.productName }}
+          Editeaza produsul   {{ products.productName }}
         </p>
       </div>
       <div class="update__content">

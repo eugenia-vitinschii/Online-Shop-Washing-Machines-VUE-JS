@@ -1,8 +1,7 @@
-
 .product{
+   
 &__wrapper {
-   background: $white;
-   @include item()
+   @include item();
 }
 &__wrapper:hover{
    @include itemHover();
@@ -27,6 +26,7 @@
    margin:$margin-top;
 }
 &__promo {
+ 
 }
 
 &__price {
@@ -39,7 +39,6 @@
 &__decription {
    //table  
     display: flex;   
-    
 
    justify-content: space-between;
    width: 100%;

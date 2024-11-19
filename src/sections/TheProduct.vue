@@ -21,7 +21,7 @@
               </p>
             </div>
             <div class="product__price-value" :class="{ hidden: hidden }">
-              <p class="small-text">
+              <p class="body-text-red">
                 Reducere <span class="bold">{{ discount }}%</span>
               </p>
               <p class="small-text">
@@ -48,6 +48,7 @@
           
           <component :is="currentTab" />
         </div>
+        <the-delivery/>
       </div>
     </div>
     <div class="product__decription">
@@ -147,6 +148,8 @@ import { defineOptions, defineProps, ref } from "vue";
 import TheButton from "../components/TheButton.vue";
 import InstallmentPayment from "./InstallmentPayment.vue";
 import CreditPayment from "./CreditPayment.vue";
+import TheDelivery from "./TheDelivery.vue"
+
 
 defineOptions({
   name: "TheProduct",
