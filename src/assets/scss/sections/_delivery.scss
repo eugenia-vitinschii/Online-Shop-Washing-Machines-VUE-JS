@@ -24,7 +24,10 @@
       
    }
    &__text {
-      text-align: center;
+      p{
+        text-align: center; 
+      }
+      
    }
 }
 @media (max-width: 600px) {
