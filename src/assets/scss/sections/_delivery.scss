@@ -9,11 +9,11 @@
    &__item {
       align-self: center;
       @include sectionItemStyle();
-      height: 170px;
+      height: 200px;
       background: $white;
    }
    &__item:last-child{
-      margin: 0;
+      margin-right: 0;
    }
    &__img {
       width: 60px;

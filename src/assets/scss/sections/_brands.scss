@@ -1,0 +1,41 @@
+.brands{
+   &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      background: $white;
+   }
+   &__img{
+      width: 100px;
+      margin: 5px;
+      img{
+         width: 100%;
+      }
+   }
+}
+
+@media (max-width: 800px) {
+   .brands{
+      &__wrapper{
+ 
+      }
+      &__img{
+         width: 70px;
+         margin: 5px;
+ 
+      }
+   }
+}
+
+@media (max-width: 620px) {
+   .brands{
+      display: none;
+   }
+  
+}
+
+
+.brand{
+   background: #000;
+}

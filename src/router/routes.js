@@ -28,6 +28,12 @@ const routes = [
       props: true 
    },
    {
+      name: "BrandsView",
+      path: '/brands',
+      component: () => import('../views/BrandsView.vue'),
+
+   },
+   {
       name: "ShoppingCardView",
       path: '/shopping-card',
       component: () => import('../views/ShoppingCardView.vue')
