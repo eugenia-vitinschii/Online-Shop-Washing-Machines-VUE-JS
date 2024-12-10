@@ -11,6 +11,14 @@
     <div class="add__content">
       <form action="" class="add__form">
         <p class="heading">Date generale</p>
+        <select name="productType" id="productType"  v-model="postProducts.productType" >
+          <option value="Mășină de splălat rufe">Mășină de splălat rufe</option>
+          <option value="Firgider">Firgider</option>
+          <option value="Mășină de splălat vase">Mășină de splălat vase</option>
+          <option value="Aragaz">Aragaz</option>
+          <option value="Cuptor cu microunde">Cuptor cu microunde</option>
+        </select>
+    <p class="heading">{{postProducts.productType}}</p> 
         <the-input
           :label="'Introduceți id'"
           :placeholder="'Introduceți id'"
@@ -156,6 +164,7 @@ const { createProduct } = store;
 
 const postProducts = ref({
   id: '',
+  productType: '',
   productCode: '',
   img:'',
   productName: '',

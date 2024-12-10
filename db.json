@@ -2,6 +2,7 @@
   "products": [
     {
       "id": "5",
+      "productType": "mds",
       "productCode": "31erter44069",
       "img": "https://cdn.27.ua/799/1e/2b/400939_1.jpeg",
       "productName": "Mășină de spălat și uscător Indesit EWDE 71280 W EU",
@@ -26,6 +27,7 @@
     },
     {
       "id": "H57684X",
+      "productType": "mds",
       "productCode": "31062315",
       "img": "https://cdn.27.ua/799/35/73/6632819_1.jpeg",
       "productName": " Samsung WW60A3100BE/UA",
@@ -50,6 +52,7 @@
     },
     {
       "id": "cxSQSyh",
+      "productType": "mds",
       "productCode": "rr7t47365487",
       "img": "https://cdn.27.ua/799/3a/85/539269_4.jpeg",
       "productName": "Whirlpool FFB 9448 BV UA",
@@ -74,6 +77,7 @@
     },
     {
       "id": "vr9l8dC",
+      "productType": "mds",
       "productCode": " 31062378d",
       "img": "https://cdn.27.ua/799/b2/5b/6926939_2.jpeg",
       "productName": "Whirlpool FFWDB 864349 BV UA",
@@ -98,6 +102,7 @@
     },
     {
       "id": "SbB407t",
+      "productType": "mds",
       "productCode": "31044069",
       "img": "https://cdn.27.ua/799/1e/2b/400939_1.jpeg",
       "productName": "cu uscător Indesit EWDE 71280 W EU",
@@ -122,6 +127,7 @@
     },
     {
       "id": "wTbwsyb",
+      "productType": "mds",
       "productCode": "31062286",
       "img": "https://cdn.27.ua/799/eb/aa/2747306_7.jpeg",
       "productName": "Electrolux EW6S406WU",
@@ -146,6 +152,7 @@
     },
     {
       "id": "kA09nGO",
+      "productType": "mds",
       "productCode": "46556756",
       "img": "https://cdn.27.ua/799/10/7c/1773692_1.jpeg",
       "productName": "Electrolux EW6S427BUI",
@@ -170,6 +177,7 @@
     },
     {
       "id": "lR2epQj",
+      "productType": "mds",
       "productCode": "31044978",
       "img": "https://cdn.27.ua/799/9c/04/2792452_1.jpeg",
       "productName": " Electrolux EW6S226CXU",
@@ -194,6 +202,7 @@
     },
     {
       "id": "A9Paomr",
+      "productType": "mds",
       "productCode": "31062442",
       "img": "https://cdn.27.ua/799/6f/45/7171909_6.jpeg",
       "productName": " Beko WUE6626XBCW",
@@ -218,6 +227,7 @@
     },
     {
       "id": "pf6IKwp",
+      "productType": "mds",
       "productCode": "31062534",
       "img": " https://cdn.27.ua/799/d3/8b/7394187_1.jpeg",
       "productName": " AEG L6SME47SU ",
@@ -242,6 +252,7 @@
     },
     {
       "id": "Nw8c8Gp",
+      "productType": "mds",
       "productCode": " 31062276",
       "img": "https://cdn.27.ua/799/e8/c6/3205318_4.jpeg",
       "productName": "Indesit OMTWE 71252 S EU",
@@ -266,6 +277,7 @@
     },
     {
       "id": "7bBAo4P",
+      "productType": "mds",
       "productCode": "31062483",
       "img": "https://cdn.27.ua/799/bd/33/7191859_4.jpeg",
       "productName": "Candy CS4 1061DE/1-9",
@@ -290,6 +302,7 @@
     },
     {
       "id": "8N02lkq",
+      "productType": "mds",
       "productCode": " 31062232",
       "img": "https://cdn.27.ua/799/86/9b/6588059_8.jpeg",
       "productName": " Samsung WW80T3040BW/UA",
@@ -314,6 +327,7 @@
     },
     {
       "id": "Worh10X",
+      "productType": "mds",
       "productCode": "31044992",
       "img": "https://cdn.27.ua/799/12/8e/2953870_2.jpeg",
       "productName": " Samsung WW90TA047AE1UA",
@@ -338,6 +352,7 @@
     },
     {
       "id": "hm9y14j",
+      "productType": "mds",
       "productCode": "31044993",
       "img": "https://cdn.27.ua/799/12/8c/2953868_1.jpeg",
       "productName": " Samsung WW90TA047AX1UA",
@@ -362,6 +377,7 @@
     },
     {
       "id": "_iHnPJ9",
+      "productType": "mds",
       "productCode": "31062502",
       "img": "https://cdn.27.ua/799/34/d9/7353561_1.jpeg",
       "productName": "Samsung WW80AG6S28AEUA",
@@ -386,6 +402,7 @@
     },
     {
       "id": "LHzsSBt",
+      "productType": "mds",
       "productCode": "31062500",
       "img": "https://cdn.27.ua/799/34/cd/7353549_1.jpeg",
       "productName": "Samsung WW70AG5S20EEUA",
@@ -410,6 +427,7 @@
     },
     {
       "id": "fkS2CgP",
+      "productType": "mds",
       "productCode": "31044991",
       "img": "https://cdn.27.ua/799/12/8a/2953866_3.jpeg",
       "productName": "Samsung WW90T554CAT1UA",
@@ -434,6 +452,7 @@
     },
     {
       "id": "u3tt5eu",
+      "productType": "mds",
       "productCode": "31062345",
       "img": "https://cdn.27.ua/799/1d/53/6757715_22.jpeg",
       "productName": "Whirlpool WRBSS 6215 W UA",
@@ -458,6 +477,7 @@
     },
     {
       "id": "nV8Mh8q",
+      "productType": "mds",
       "productCode": " 31062289",
       "img": "https://cdn.27.ua/799/eb/a0/2747296_8.jpeg",
       "productName": " Indesit OMTWSA 51052 W EU",
@@ -482,6 +502,7 @@
     },
     {
       "id": "zSv5S2q",
+      "productType": "mds",
       "productCode": "31062346",
       "img": "https://cdn.27.ua/799/1d/55/6757717_10.jpeg",
       "productName": " Whirlpool WRBSB 6228 B UA",
@@ -506,6 +527,7 @@
     },
     {
       "id": "O1TPZhG",
+      "productType": "mds",
       "productCode": "31062295",
       "img": "https://cdn.27.ua/799/eb/60/2747232_1.jpeg",
       "productName": "Whirlpool AWE60410",
@@ -530,6 +552,7 @@
     },
     {
       "id": "y7lsfXL",
+      "productType": "mds",
       "productCode": "003305697",
       "img": "https://cdn.27.ua/799/8e/6d/6917741_8.jpeg",
       "productName": " Whirlpool AWE5080",
@@ -554,6 +577,7 @@
     },
     {
       "id": "XtzPcoV",
+      "productType": "mds",
       "productCode": " 31044751",
       "img": "https://cdn.27.ua/799/3d/ef/1195503_1.jpeg",
       "productName": "Beko WUE5411XWW",
@@ -578,6 +602,7 @@
     },
     {
       "id": "_0dZ6ty",
+      "productType": "mds",
       "productCode": " 31062571",
       "img": "https://cdn.27.ua/799/b3/9d/7582621_7.jpeg",
       "productName": "Beko WUE6511IXWW",
@@ -602,6 +627,7 @@
     },
     {
       "id": "bMpByd6",
+      "productType": "mds",
       "productCode": "31044645",
       "img": "https://cdn.27.ua/799/c0/c4/1097924_1.jpeg",
       "productName": "Beko HTE7616X0",
@@ -626,6 +652,7 @@
     },
     {
       "id": "J08CfDW",
+      "productType": "mds",
       "productCode": "004066574",
       "img": "https://cdn.27.ua/799/d4/73/8508531_1.jpeg ",
       "productName": "Beko WUE 6512 IXBW",
@@ -650,6 +677,7 @@
     },
     {
       "id": "GWg3ACA",
+      "productType": "mds",
       "productCode": "003509649",
       "img": "https://cdn.27.ua/799/eb/c3/7334851_1.jpeg",
       "productName": " Beko WUE6512SXAW",
@@ -671,6 +699,56 @@
       "color": "alb",
       "countryOfAssembly": "România ",
       "guarantee": "36"
+    },
+    {
+      "id": "QxtW1B3",
+      "productType": "mds",
+      "productCode": "31040574",
+      "img": "https://cdn.27.ua/799/17/34/595764_5.jpeg",
+      "productName": "Frigider Samsung RB33J3000SA/UA",
+      "price": "26500",
+      "discount": "5",
+      "brand": "Samsung",
+      "waterConsumption": "",
+      "energyEfficiencyClass": "",
+      "type": "",
+      "spinSpeed": "",
+      "loadCapacity": "",
+      "noiseLevelCentrifugation": "",
+      "noiseLevelWashing": "",
+      "typeControl": "",
+      "numberOfPrograms": "",
+      "weightInPackage": "",
+      "depth": "",
+      "weight": "",
+      "color": "",
+      "countryOfAssembly": "",
+      "guarantee": ""
+    },
+    {
+      "id": "bSx9iXE",
+      "productType": "mds",
+      "productCode": "31051741",
+      "img": "https://cdn.27.ua/799/f9/06/2554118_1.jpeg",
+      "productName": "Rfigider Samsung RB33J3000EL/UA",
+      "price": "2500",
+      "discount": "4",
+      "brand": "Samsung",
+      "waterConsumption": "",
+      "energyEfficiencyClass": "",
+      "type": "",
+      "spinSpeed": "",
+      "loadCapacity": "",
+      "noiseLevelCentrifugation": "",
+      "noiseLevelWashing": "",
+      "typeControl": "",
+      "numberOfPrograms": "",
+      "weightInPackage": "",
+      "depth": "",
+      "weight": "",
+      "color": "",
+      "countryOfAssembly": "",
+      "guarantee": ""
     }
   ],
   "admin": [
