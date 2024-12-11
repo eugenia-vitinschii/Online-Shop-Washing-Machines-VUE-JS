@@ -6,9 +6,9 @@
         <!-- product component -->
         <the-product
           :id="products.id"
+          :general="products.general.productCode"
           :productCode="products.productCode"
           :img="products.img"
-          :productName="products.productName"
           :price="products.price"
           :discount="products.discount"
           :brand="products.brand"
