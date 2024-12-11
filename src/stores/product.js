@@ -92,6 +92,7 @@ export const useProductStore = defineStore("productId", {
       try {
         await axios.put(`${baseUrl}/products/${id}`, {
           id: this.products.id,
+          test: this.products.test,
           productCode: this.products.productCode,
           img: this.products.img,
           productName: this.products.productName,

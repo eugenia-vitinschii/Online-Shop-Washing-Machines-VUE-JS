@@ -22,7 +22,7 @@ defineOptions({
 
 defineProps({
   value: {
-    type: String,
+    type: [Object, String],
     defaul: "",
   },
   label: {

@@ -19,12 +19,13 @@
           <option value="Cuptor cu microunde">Cuptor cu microunde</option>
         </select>
     <p class="heading">{{postProducts.productType}}</p> 
+    <div class="add__content-info" v-show="postProducts.productType != ''">
         <the-input
           :label="'Introduceți id'"
           :placeholder="'Introduceți id'"
           v-model.trim:value="postProducts.id"
         />
-        <the-input
+          <the-input
           :label="'Introduceți COD'"
           :placeholder="'DMB383292PP'"
           v-model:value.trim="postProducts.productCode"
@@ -38,6 +39,21 @@
           :label="'Introduceți denumirea pentru produs'"
           :placeholder="'Mașină de spălat frontală Indesit'"
           v-model:value.trim="postProducts.productName"
+        />  
+         <the-input
+          :label="'fdfd test'"
+          :placeholder="'fdfdf test'"
+           v-model:value.trim="postProducts.test"
+        /> 
+        <the-input
+          :label="'fdfd test'"
+          :placeholder="'vslue'"
+           v-model:value.trim="postProducts.test.data"
+        /> 
+        <the-input
+          :label="'fdfd test'"
+          :placeholder="'fdfdf info'"
+           v-model:value.trim="postProducts.test.info"
         />
         <the-input
           :label="'Introduceți prețul produsului'"
@@ -49,12 +65,15 @@
           :placeholder="'17'"
           v-model:value.trim="postProducts.discount"
         />
-        <p class="heading">Informația despre produs</p>
         <the-input
           :label="'Introduceți denumirea brandului pentru produs'"
           :placeholder="'Indesit'"
           v-model:value.trim="postProducts.brand"
         />
+    </div>
+    <div class="add__content-mds" v-if="postProducts.productType === 'Mășină de splălat rufe'">
+        <p class="heading">Informația despre produs</p>  
+       
         <the-input
           :label="'Consum de apă în program, l/ciclu'"
           :placeholder="'20'"
@@ -102,21 +121,8 @@
           v-model:value.trim="postProducts.numberOfPrograms"
         />
         <p class="heading">Dimensiuni</p>
-        <the-input
-          :label="'Greutate în ambalaj, kg'"
-          :placeholder="'63'"
-          v-model:value.trim="postProducts.weightInPackage"
-        />
-        <the-input
-          :label="'Adâncime, cm'"
-          :placeholder="'43'"
-          v-model:value.trim="postProducts.depth"
-        />
-        <the-input
-          :label="'Greutate, kg'"
-          :placeholder="'61'"
-          v-model:value.trim="postProducts.weight"
-        />
+ 
+
         <p class="heading">Informaţii generale</p>
         <the-input
           :label="'Culoare'"
@@ -133,13 +139,40 @@
           :placeholder="'36'"
           v-model:value.trim="postProducts.guarantee"
         />
+  <p class="heading">New type</p>
+  <p class="heading">Dimensiuni și greutate</p>
+  <the-input
+          :label="'Înălţime, cm'"
+          :placeholder="'263'"
+           v-model:value.trim="postProducts.height"
+        />
+          <the-input
+          :label="'Lăţime, cm'"
+          :placeholder="'263'"
+          v-model:value.trim="postProducts.width"
+        />
+         <the-input
+          :label="'Adâncime, cm'"
+          :placeholder="'263'"
+          v-model:value.trim="postProducts.depth"
+        />
+         <the-input
+          :label="'Greutate în ambalaj, kg'"
+          :placeholder="'263'"
+          v-model:value.trim="postProducts.weight"
+          
+        />
+        
+    </div>
+ 
+        
         <the-button class="green__button" @click.prevent="addPostData()"> Salvează </the-button>
         <the-button class="red__button" @click="goBack()">Acasă</the-button>
       </form>
     </div>
   </div>
   </div>
-  
+
 </template>
  
   
@@ -162,8 +195,11 @@ defineOptions({
 const store = useProductStore ();
 const { createProduct } = store;
 
+ 
+
 const postProducts = ref({
   id: '',
+  test: {data: '',info: '' },
   productType: '',
   productCode: '',
   img:'',
@@ -191,6 +227,7 @@ const postProducts = ref({
 const addPostData = () => {
   createProduct(postProducts.value);
   postProducts.value.id = '';
+  postProducts.value.test =  {data: '',info: '' };
   postProducts.value.productCode= '';
   postProducts.value.img= '';
   postProducts.value.productName= '';

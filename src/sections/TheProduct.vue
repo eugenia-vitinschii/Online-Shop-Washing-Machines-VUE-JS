@@ -10,6 +10,7 @@
         <!-- Wrapper for Discount & Credit prices -->
         <div class="product__promo">
           <p class="heading"> Mășină de spălat {{productName }}</p>
+          <p class="heading">test: {{test }}</p>
           <!-- Discount  Price -->
           <div class="product__price">
             <div class="product__price-value">
