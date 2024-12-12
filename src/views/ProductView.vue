@@ -7,6 +7,7 @@
         <the-product
           :id="products.id"
           :productCode="products.productCode"
+          :productName="products.productName"
           :img="products.img"
           :price="products.price"
           :discount="products.discount"

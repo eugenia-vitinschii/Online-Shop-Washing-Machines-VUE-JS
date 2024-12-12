@@ -12,6 +12,7 @@
           <!-- Discount  Price -->
           <div class="product__price">
             <div class="product__price-value">
+              <p class="subheading">{{productName}}</p>
               <p class="small-text price" :class="{ oneprice: onePrice }">
                 Preț {{ price }} lei
               </p>

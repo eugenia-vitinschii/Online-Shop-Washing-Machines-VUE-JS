@@ -1,5 +1,4 @@
 .item {
-
    &__item{  
     @include item();
    }
@@ -84,7 +83,6 @@
  
  .price {
    text-decoration: line-through;
-   color: $white;
  }
  
  .new-price {

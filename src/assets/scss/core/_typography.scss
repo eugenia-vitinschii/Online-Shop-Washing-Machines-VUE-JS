@@ -36,6 +36,10 @@
 .body-text{
 	@include font-style( $orange, 10px, left);
 }
+
+
+
+
 // 	@media (max-width: 1024px)
 //    .heading, .brand-text
 //       @include font-size($heading-md, 38px)
