@@ -6,18 +6,6 @@
     </div>
   </div>
 </div>
-<div class="brands">
-  <div class="container">
-    <div class="brands__wrapper">
-      <brands-section
-      v-for="item in brands"
-      :key="item.id"
-      :img="item.img"
-      :brand="item.brand"
-      />
-    </div>
-  </div>
-</div>
 <div class="delivery">
     <div class="container">
       <div class="delivery__wrapper">
@@ -42,7 +30,7 @@ import { defineOptions } from "vue";
 //import components
 import DeliveryItem from "@/components/DeliveryItem.vue"
 import TheSlider  from "@/sections/TheSlider.vue";
-import BrandsSection from "@/sections/BrandsSection.vue"
+ 
 
 defineOptions({
   name: "HomeView",
@@ -74,45 +62,5 @@ const items = [
     body: "În termen de 14 zile",
   },
 ];
-
-
-const brands = [
-  {
-    id: 1,
-    img: require("@/assets/img/brands/aeg.png"),
-    brand: 'aeg'
-  },
-    {
-    id: 2,
-    img: require("@/assets/img/brands/beko.jpg"),
-    brand: 'aeg'
-  },
-    {
-    id: 3,
-    img: require("@/assets/img/brands/candy.jpg"),
-    brand: 'aeg'
-  },
-    {
-    id: 4,
-    img: require("@/assets/img/brands/electrolux.png"),
-    brand: 'aeg'
-  },
-      {
-    id: 5,
-    img: require("@/assets/img/brands/indesit.png"),
-    brand: 'aeg'
-  },
-        {
-    id: 6,
-    img: require("@/assets/img/brands/samsung.jpg"),
-    brand: 'aeg'
-  },
-          {
-    id: 7,
-    img: require("@/assets/img/brands/whirlpool.png"),
-    brand: 'aeg'
-  },
-  
-]
 </script>
  
