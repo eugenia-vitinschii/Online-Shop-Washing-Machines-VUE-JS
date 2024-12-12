@@ -9,9 +9,6 @@
       <div class="product__prices">
         <!-- Wrapper for Discount & Credit prices -->
         <div class="product__promo">
-          <p class="heading"> Mășină de spălat {{productName }}</p>
-          <p class="heading">general all:{{general}}</p>
-          <p class="heading">general:  </p>
           <!-- Discount  Price -->
           <div class="product__price">
             <div class="product__price-value">
@@ -55,14 +52,13 @@
     </div>
     <div class="product__decription">
       <table class="product__decription-table">
-        <p class="heading">!Edit!</p>
-        <tr v-for="item in general" :key="item.name"> 
+        <tr> 
           <th>Informația despre produs</th>
           <th></th>
         </tr>
         <tr>
           <td>Brand</td>
-          <td class="small-text">{{ item.brand }}</td>
+          <td class="small-text">{{ brand }}</td>
         </tr>
         <tr>
           <td>Consum de apă în program, l/ciclu</td>
@@ -172,12 +168,6 @@ const testCredit = [
 ];
 
 defineProps({
-  test:{
-    type: String,
-  },
-  general:{
-    type: Object
-  },
   id: {
     type: String,
   },

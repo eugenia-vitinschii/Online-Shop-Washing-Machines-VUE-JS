@@ -6,7 +6,6 @@
         <!-- product component -->
         <the-product
           :id="products.id"
-          :general="products.general"
           :productCode="products.productCode"
           :img="products.img"
           :price="products.price"
@@ -26,9 +25,8 @@
           :weight="products.weight"
           :color="products.color"
           :countryOfAssembly="products.countryOfAssembly"
-          :hidden=showPrices(products)
-          :onePrice=showOnePrice(products)
- 
+          :hidden="showPrices(products)"
+          :onePrice="showOnePrice(products)"
           :newPrice="newPrice(products.price, products.discount)"
           :economie="saveMoney( products.price, products.discount)"
           :monthlyPrice="monthlyPrice(products.price)"

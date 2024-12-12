@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import axios from "axios"
- import router from '@/router/routes';
+import router from '@/router/routes';
 
 const baseUrl = 'http://localhost:3000'
 
@@ -87,41 +87,6 @@ export const useProductStore = defineStore("productId", {
     })
     },
     // edit product
-<<<<<<< HEAD
-    async updateProducts(id) {
-      try {
-        await axios.put(`${baseUrl}/products/${id}`, {
-          id: this.products.id,
-          test: this.products.test,
-          productCode: this.products.productCode,
-          img: this.products.img,
-          productName: this.products.productName,
-          price: this.products.price,
-          discount: this.products.discount,
-          brand: this.products.brand,
-          waterConsumption: this.products.waterConsumption,
-          energyEfficiencyClass: this.products.energyEfficiencyClass,
-          type: this.products.type,
-          spinSpeed: this.products.spinSpeed,
-          loadCapacity: this.products.loadCapacity,
-          noiseLevelCentrifugation: this.products.noiseLevelCentrifugation,
-          noiseLevelWashing: this.products.noiseLevelWashing,
-          typeControl: this.products.typeControl,
-          numberOfPrograms: this.products.numberOfPrograms,
-          weightInPackage: this.products.weightInPackage,
-          depth: this.products.depth,
-          weight: this.products.weight,
-          color: this.products.color,
-          countryOfAssembly: this.products.countryOfAssembly,
-          guarantee: this.products.guarantee,
-        });
-
-        // this.router.push({name: "ProductPage"})
-      } catch (err) {
-        console.error(err);
-      } finally {
-        router.push({ path: "/admin-panel" });
-=======
     async updateProducts(id){
 			try{
 		await axios.put(`${baseUrl}/products/${id}`,{
@@ -154,7 +119,6 @@ export const useProductStore = defineStore("productId", {
 				console.error(err);
 			} finally{
           router.push({  path: '/admin-panel'})
->>>>>>> parent of ae0c687 (create brands section, add logo images, create brands views)
       }
 		},
     // get product info  by id
