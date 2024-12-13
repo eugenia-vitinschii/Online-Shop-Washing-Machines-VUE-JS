@@ -147,7 +147,7 @@ export const useProductStore = defineStore("productId", {
    monthlyPrice(price){
       let totalPrice = Math.round(+price + (price * 40)/100)
       let monthlyPrice = Math.round(totalPrice / 36)
-    return monthlyPrice 
+    return monthlyPrice
     },
     dicountLabel(discount) {
       if (discount < 9 && discount > 1 ) {

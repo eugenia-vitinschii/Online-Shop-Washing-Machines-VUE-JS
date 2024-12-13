@@ -1,9 +1,12 @@
-.credit__table{
-border-collapse: collapse;
-th, td {
-font-size: $body-text-sm;
-color: $black;
-   text-align: left;
-   border-bottom: 1px solid $dark-green;
- }
+//table for Credit & Installment compoents
+.credit__table {
+  width: 100%;
+  border-collapse: collapse;
+  th,
+  td {
+    font-size: $body-text-sm;
+    color: $black;
+    text-align: left;
+    border-bottom: 1px solid $dark-green;
+  }
 }

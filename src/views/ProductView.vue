@@ -64,12 +64,12 @@ const { getProducts, saveMoney, newPrice , monthlyPrice } = store;
 
 //functions
 function showPrices(products){
-    if(products.discount<  1 || products.discount > 99 ){
+    if(Number(products.discount)<  1 || Number(products.discount) > 99 ){
     return  true
   }
 }
 function showOnePrice(products){
-    if(products.discount<  1 || products.discount > 99 ){
+    if(Number(products.discount)<  1 || Number(products.discount) > 99 ){
     return  true
   }
 }

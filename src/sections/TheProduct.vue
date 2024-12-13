@@ -143,7 +143,7 @@
 
 <script setup>
 //vue
-import { defineOptions, defineProps, ref } from "vue";
+import { defineOptions, defineProps, markRaw } from "vue";
 //components
 import TheButton from "../components/TheButton.vue";
 import InstallmentPayment from "./InstallmentPayment.vue";
@@ -155,7 +155,7 @@ defineOptions({
   name: "TheProduct",
 });
 
-const currentTab = ref("InstallmentPayment");
+const currentTab = markRaw("InstallmentPayment");
 
 const testCredit = [
   {
@@ -182,12 +182,10 @@ defineProps({
     type: String,
   },
   price: {
-    type: Number,
-    default: 0,
+    type: String,
   },
   discount: {
-    type: Number,
-    default: 0,
+    type:String,
   },
   brand: {
     type: String,
