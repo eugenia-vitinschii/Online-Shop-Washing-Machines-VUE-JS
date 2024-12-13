@@ -7,13 +7,20 @@
       grid-template-columns: repeat(4, 1fr);
    }
    &__item {
-      align-self: center;
-      @include sectionItemStyle();
-      height: 170px;
+       @include sectionItemStyle();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 200px;
       background: $white;
    }
    &__item:last-child{
-      margin: 0;
+      margin-right: 0;
+   }
+   &__item-top{
+      flex: 1 0 auto;
+   }
+   &__item-bottom{
    }
    &__img {
       width: 60px;

@@ -1,18 +1,17 @@
 .panel {
-  &__wrapper {
-  }
+  // &__wrapper {
+  // }
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $orange;
+    background: $white;
     padding: 10px;
   }
-  &__buttons {
-  }
-
-  &__user {
-  }
+  // &__buttons {
+  // }
+  // &__user {
+  // }
   &__user-img {
     width: 30px;
     height: 30px;
@@ -23,8 +22,8 @@
       border: 1px solid $dark-green;
     }
   }
-  &__content {
-  }
+  // &__content {
+  // }
 }
 
 //table for edit products

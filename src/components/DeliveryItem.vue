@@ -1,10 +1,13 @@
 .<template>
   <div class="delivery__item">
-    <div class="delivery__img">
+    <div class="delivery__item-top">
+      <div class="delivery__img">
       <img :src="img" alt="Not found" />
     </div>
-    <div class="delivery__text">
-      <p class="subheading">{{ name }}</p>
+     <p class="subheading">{{ name }}</p>
+    </div>
+    <div class="delivery__item-bottom">
+     
       <p class="small-text">{{ body }}</p>
     </div>
   </div>
