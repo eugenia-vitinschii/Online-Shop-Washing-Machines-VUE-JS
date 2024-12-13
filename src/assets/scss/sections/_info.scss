@@ -1,0 +1,11 @@
+// for returnPolicy component
+.info {
+   margin-top: 40px;
+   &__item {
+      display: flex;
+      align-items: center;
+      p{
+         margin-left: 5px;
+      }
+   }
+}

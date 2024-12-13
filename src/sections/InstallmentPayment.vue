@@ -1,6 +1,6 @@
 <template>
   <p class="body-text">Cumpără {{ products.productName }} în rate: </p>
-  <p class="body-text-red">Dobândă: 0% </p>
+  <p class="body-text-green">Dobândă: 0% </p>
   <table class="credit__table">
     <tr>
       <th>Termen luni</th>

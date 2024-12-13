@@ -1,3 +1,4 @@
+// popup item  from TheInfo component
 .modal {
    &__wrapper{
       position: fixed;
@@ -12,10 +13,11 @@
       background: rgba(0, 0, 0, 0.5);
    }
    &__content{
+      @include  item();
       width: 500px;
       padding: 30px;
-      margin: 5px;
-      background: $orange;
+      margin: 15px;
+      background: $white;
    }
    &__content:hover{ 
    }
@@ -33,12 +35,9 @@
 .popup-enter-active{ 
   transition: all 0.3s ease-out;
 }
-
-
 .popup-fade-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-
 
 .popup-fade-enter-from,
 .popup-fade-leave-to {

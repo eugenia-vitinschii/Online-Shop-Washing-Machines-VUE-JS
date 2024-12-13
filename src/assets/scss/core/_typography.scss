@@ -1,10 +1,13 @@
 
 .body-text,
-.body-text-red {
+.body-text-red, .body-text-green {
 	font-size: $body-text;
 }
 .body-text-red {
 	color: $red;
+}
+.body-text-green{
+	color: $green;
 }
 .small-text {
 	font-size: 14;
@@ -17,14 +20,16 @@
 .red {
 	color: $red;
 }
-
+.green {
+	color: $green
+}
 // font styles
 .heading{
-   @include font-style( $orange, 10px, left);
+   @include font-style( $dark-orange, 10px, left);
    @include font-size($heading, 40px);
 }
 .subheading{ 
-   @include font-style( $orange, 10px, left);
+   @include font-style( $dark-orange, 10px, left);
    @include font-size($subheading, 32px);
 }
 .body-text, .body-text-red  {

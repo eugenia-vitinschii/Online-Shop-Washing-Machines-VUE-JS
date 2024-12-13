@@ -1,6 +1,6 @@
 <template>
   <p class="body-text">Cumpără {{ products.productName }} în credit: </p>
-  <p class="body-text-red">Avans : 0% </p>
+  <p class="body-text-green">Avans : 0% </p>
   <table class="credit__table">
     <tr>
       <th>Termen luni</th>

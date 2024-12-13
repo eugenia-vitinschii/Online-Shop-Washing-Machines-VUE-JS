@@ -14,17 +14,17 @@
             <div class="product__price-value">
               <p class="subheading">{{productName}}</p>
               <p class="small-text price" :class="{ oneprice: onePrice }">
-                Preț {{ price }} lei
+                {{ price }} lei
               </p>
-              <p class="body-text red" :class="{ hidden: hidden }">
-              Preț nou {{ newPrice }} lei
+              <p class="subheading" :class="{ hidden: hidden }">
+              Preț nou:  {{ newPrice }} lei
               </p>
             </div>
             <div class="product__price-value" :class="{ hidden: hidden }">
               <p class="body-text-red">
                 Reducere <span class="bold">{{ discount }}%</span>
               </p>
-              <p class="small-text">
+              <p class="body-text-green">
                 Economie <span class="bold">{{ economie }}lei! </span>
               </p>
             </div>
@@ -48,7 +48,7 @@
           
           <component :is="currentTab" />
         </div>
-        <the-delivery/>
+        <the-info/>
       </div>
     </div>
     <div class="product__decription">
@@ -148,7 +148,7 @@ import { defineOptions, defineProps, ref } from "vue";
 import TheButton from "../components/TheButton.vue";
 import InstallmentPayment from "./InstallmentPayment.vue";
 import CreditPayment from "./CreditPayment.vue";
-import TheDelivery from "./TheDelivery.vue"
+import TheInfo from "./TheInfo.vue"
 
 
 defineOptions({
