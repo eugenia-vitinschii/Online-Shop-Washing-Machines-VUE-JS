@@ -12,7 +12,7 @@
           <!-- Discount  Price -->
           <div class="product__price">
             <div class="product__price-value">
-              <p class="subheading">{{productName}}</p>
+              <p class="subheading"> {{productType}} {{productName}}</p>
               <p class="small-text price" :class="{ oneprice: onePrice }">
                 {{ price }} lei
               </p>
@@ -143,7 +143,7 @@
 
 <script setup>
 //vue
-import { defineOptions, defineProps, markRaw } from "vue";
+import { defineOptions, defineProps, shallowRef} from "vue";
 //components
 import TheButton from "../components/TheButton.vue";
 import InstallmentPayment from "./InstallmentPayment.vue";
@@ -155,7 +155,7 @@ defineOptions({
   name: "TheProduct",
 });
 
-const currentTab = markRaw("InstallmentPayment");
+const currentTab = shallowRef("InstallmentPayment");
 
 const testCredit = [
   {
@@ -176,6 +176,9 @@ defineProps({
     type: String,
   },
   img: {
+    type: String,
+  },
+  productType: {
     type: String,
   },
   productName: {

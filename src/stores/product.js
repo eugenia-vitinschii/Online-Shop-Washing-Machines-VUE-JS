@@ -41,7 +41,6 @@ export const useProductStore = defineStore("productId", {
         console.log(error)
       }
 		},
-
     // add new product in db.json
     async createProduct(payload) {
       try {

@@ -149,6 +149,7 @@
             :brand="product.brand"
             :img="product.img"
             :productName="product.productName"
+            :productType="product.productType"
             :price="product.price"
             :discount="product.discount"
             :labfel="product.label"

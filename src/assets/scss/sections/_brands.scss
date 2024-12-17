@@ -1,3 +1,4 @@
+// BrandsSection component
 .brands{
    margin-top: $margin-top;
    &__wrapper{
@@ -15,12 +16,9 @@
       }
    }
 }
-
+// for devices smaller with 800px
 @media (max-width: 800px) {
    .brands{
-      &__wrapper{
-
-      }
       &__img{
          width: 70px;
          margin: 5px;
@@ -28,14 +26,10 @@
       }
    }
 }
-
+// for devices smaller with 620px
 @media (max-width: 620px) {
    .brands{
       display: none;
    }
   
-}
-
-.brand{
-   background: #000;
 }

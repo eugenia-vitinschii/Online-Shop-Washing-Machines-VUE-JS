@@ -8,6 +8,7 @@
           :id="products.id"
           :productCode="products.productCode"
           :productName="products.productName"
+          :productType="products.productType"
           :img="products.img"
           :price="products.price"
           :discount="products.discount"

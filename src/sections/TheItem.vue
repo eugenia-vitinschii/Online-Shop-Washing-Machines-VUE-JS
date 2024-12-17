@@ -23,7 +23,7 @@
         </div>
       </router-link>
       <router-link :to="'/product/' + id">
-        <p class="body-text">{{ productName }}</p>
+        <p class="body-text"> {{productType}} {{ productName }}</p>
       </router-link>
     </div>
     <!-- Prices blocks -->
@@ -86,6 +86,9 @@ defineProps({
     type: String,
   },
   img: {
+    type: String,
+  },
+  productType:{
     type: String,
   },
   productName: {
