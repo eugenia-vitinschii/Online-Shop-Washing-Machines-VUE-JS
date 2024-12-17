@@ -13,10 +13,10 @@
           <div class="product__price">
             <div class="product__price-value">
               <p class="subheading"> {{productType}} {{productName}}</p>
-              <p class="small-text price" :class="{ oneprice: onePrice }">
+              <p class="small-text " :class="{ oneprice: onePrice }">
                 {{ price }} lei
               </p>
-              <p class="subheading" :class="{ hidden: hidden }">
+              <p class="subheading onePrice" :class="{ hidden: hidden }">
               Preț nou:  {{ newPrice }} lei
               </p>
             </div>

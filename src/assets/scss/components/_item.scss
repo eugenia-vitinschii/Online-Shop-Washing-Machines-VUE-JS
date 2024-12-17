@@ -103,11 +103,12 @@
   text-transform: uppercase;
    color: $black
  }
- .oneprice {
+ .onePrice {
    text-decoration: none;
-   font-size: 20px;
    font-weight: bold;
  }
+
+
  button {
    background: $white;
  }
@@ -149,13 +150,15 @@
 .redHeart{
   fill: $orange;
 }
+ 
 
- .oneprice{
-  text-decoration: none;
+ .onePrice{
   color: $black;
-font-size: $body-text;
-font-weight: bold;
+  font-size: $body-text;
+ 
  }
+
+
  @media (max-width:667px){
 	.item {
     &__item{

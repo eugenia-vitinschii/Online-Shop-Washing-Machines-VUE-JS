@@ -19,6 +19,7 @@ export const useProductStore = defineStore("productId", {
     allProducts() {
       return this.checkboxFilters.length  
     },
+    //filter items by brand using checkbox 
     checkboxFilters() {
       if (this.checked  == 0) {
          return this.products;
@@ -28,6 +29,10 @@ export const useProductStore = defineStore("productId", {
         );
       }
     },
+    //filter items by brand
+    getItemsByBrand: (state) => {
+      return (brandName) => state.products.filter((item) => item.brand === brandName)
+    }
   },
   actions: {
     // get all products in db.json

@@ -3,7 +3,9 @@
   <div class="item__item">
     <div class="item__top">
       <div class="item__logo">
-        <p class="brand">{{ brand }}</p>
+        <router-link :to="'/brand/' + brand" class="body-text">
+            {{ brand }}
+          </router-link>
       </div>
       <!-- labels for dicsount products -->
       <div class="item_labels">
@@ -29,10 +31,10 @@
     <!-- Prices blocks -->
     <div class="item__price">
       <div class="item__price-value">
-        <p class="small-text  " :class="{ oneprice: onePrice }">
+        <p class="small-text " :class="{ oneprice: onePrice }">
           {{ price }} lei
         </p>
-        <p class="body-text red" :class="{ hidden: hidden }">
+        <p class="body-text onePrice" :class="{ hidden: hidden }">
           {{ newPrice }} lei
         </p>
       </div>

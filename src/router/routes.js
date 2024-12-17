@@ -28,6 +28,11 @@ const routes = [
       props: true 
    },
    {
+      name: "BrandView",
+      path: "/brand/:brand",
+      component: () => import("../views/BrandView.vue")
+   },
+   {
       name: "ShoppingCardView",
       path: '/shopping-card',
       component: () => import('../views/ShoppingCardView.vue')

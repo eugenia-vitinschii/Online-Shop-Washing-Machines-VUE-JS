@@ -80,7 +80,7 @@ const brands = [
   {
     id: 1,
     img: require("@/assets/img/brands/aeg.png"),
-    brand: 'aeg'
+    brand: 'AEG'
   },
     {
     id: 2,
