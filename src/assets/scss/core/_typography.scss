@@ -11,7 +11,7 @@
 }
 .small-text {
 	font-size: 14;
-	color: #000000;
+	color: $black;
 }
 
 .bold {
@@ -25,11 +25,11 @@
 }
 // font styles
 .heading{
-   @include font-style( $dark-orange, 10px, left);
+   @include font-style( $black, 10px, left);
    @include font-size($heading, 40px);
 }
 .subheading{ 
-   @include font-style( $dark-orange, 10px, left);
+   @include font-style( $black, 10px, left);
    @include font-size($subheading, 32px);
 }
 .body-text, .body-text-red  {
@@ -39,7 +39,7 @@
 	@include font-style( $red, 10px, left);
 }
 .body-text{
-	@include font-style( $orange, 10px, left);
+	@include font-style( $black, 10px, left);
 }
 
 

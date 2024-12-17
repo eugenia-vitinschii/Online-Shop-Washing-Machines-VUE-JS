@@ -37,10 +37,10 @@
         </p>
       </div>
       <div class="item__price-value" :class="{ hidden: hidden }">
-        <p class="small-text">
+        <p class="body-text-red">
           Reducere <span class="bold">{{ discount }}%</span>
         </p>
-        <p class="small-text">
+        <p class="body-text-green">
           Economie <span class="bold">{{ economie }} lei!</span>
         </p>
       </div>
