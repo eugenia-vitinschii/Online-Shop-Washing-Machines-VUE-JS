@@ -15,9 +15,9 @@
             :productType="product.productType"
             :price="product.price"
             :discount="product.discount"
-            :labfel="product.label"
-            :newPrice="newPrice(product.price, product.discount)"
-            :economie="saveMoney(product.price, product.discount)"
+            :label="product.label"
+             :newPrice="getNewPrice(product.price)(product.discount)"
+            :economie="getMoneySaved(product.price)(product.discount)"
             :monthlyPrice="monthlyPrice(product.price)"
             :hidden="showPrices(product.discount)"
             :onePrice="showOnePrice(product.discount)"
@@ -25,6 +25,11 @@
             :hugeSaleLabel="hugeSaleLabel(product.discount)"
             @addToCard="addProductCard(product)"
           />
+                    <div class="spaces"></div>
+          <div class="spaces"></div>
+          <div class="spaces"></div>
+          <div class="spaces"></div>
+          <div class="spaces"></div>
         </div>
       </div>
     </div>
@@ -57,8 +62,8 @@ const brand = route.params.brand;
 const {
   fetchProducts,
   addToCart,
-  saveMoney,
-  newPrice,
+  getMoneySaved,
+  getNewPrice,
   monthlyPrice,
   dicountLabel,
   hugeSaleLabel,

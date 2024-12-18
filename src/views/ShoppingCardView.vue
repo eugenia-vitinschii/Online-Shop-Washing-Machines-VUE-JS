@@ -24,8 +24,9 @@
             :brand="item.brand"
             :discount="item.discount"
             :price="item.price"
-            :saveMoney="saveMoney(item)"
-            :newPrice="newPrice(item)"
+
+            :newPrice="getNewPrice(item)"
+            :economie="getMoneySaved(item)"
           />
         </div>
       </div>
@@ -50,13 +51,13 @@ const store = useProductStore();
 
 const { user } = storeToRefs(store);
 
-function saveMoney(item) {
+function getNewPrice(item) {
   let eco = Math.floor(item.price - (item.price * item.discount) / 100);
   let saved = item.price - eco;
   return saved;
 }
 
-function newPrice(item) {
+function getMoneySaved(item) {
   let eco = Math.floor(item.price - (item.price * item.discount) / 100);
   return eco;
 }

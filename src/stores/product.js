@@ -135,24 +135,21 @@ export const useProductStore = defineStore("productId", {
 				console.error('Updae ERROR:', err);
 			}
 		},
+     // amount of saved money
+     getMoneySaved(price){
+        return (discount) =>  Math.floor(price - (price - (price * discount) / 100 ));
+     },
+     // get new price after apply discount
+     getNewPrice(price){
+      return (discount) => Math.floor(price - (price * discount) / 100);
+     },
 
-    saveMoney(price, discount) {
-         let eco = Math.floor(
-          price - (price - (price * discount) / 100)
-      );
-      return eco;
-     },
-     newPrice(price, discount){
-      let eco = Math.floor(
-       price - (price * discount) / 100
-      );
-      return eco;
-     },
    monthlyPrice(price){
       let totalPrice = Math.round(+price + (price * 40)/100)
       let monthlyPrice = Math.round(totalPrice / 36)
     return monthlyPrice
     },
+
     dicountLabel(discount) {
       if (discount < 9 && discount > 1 ) {
         return true;

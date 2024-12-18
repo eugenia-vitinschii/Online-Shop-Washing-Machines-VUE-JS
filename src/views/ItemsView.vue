@@ -153,8 +153,9 @@
             :price="product.price"
             :discount="product.discount"
             :labfel="product.label"
-            :newPrice="newPrice(product.price, product.discount)"
-            :economie="saveMoney(product.price, product.discount)"
+            :newPrice="getNewPrice(product.price)(product.discount)"
+            :economie="getMoneySaved(product.price)(product.discount)"
+            
             :monthlyPrice="monthlyPrice(product.price)"
             :hidden="showPrices(product.discount)"
             :onePrice="showOnePrice(product.discount)"
@@ -195,8 +196,8 @@ const { checked } = storeToRefs(store);
 const {
   fetchProducts,
   addToCart,
-  saveMoney,
-  newPrice,
+  getMoneySaved,
+  getNewPrice,
   monthlyPrice,
   dicountLabel,
   hugeSaleLabel,

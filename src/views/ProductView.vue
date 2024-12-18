@@ -29,9 +29,9 @@
           :countryOfAssembly="products.countryOfAssembly"
           :hidden="showPrices(products)"
           :onePrice="showOnePrice(products)"
-          :newPrice="newPrice(products.price, products.discount)"
-          :economie="saveMoney( products.price, products.discount)"
           :monthlyPrice="monthlyPrice(products.price)"
+          :newPrice="getNewPrice(products.price)(products.discount)"
+          :economie="getMoneySaved(products.price)(products.discount)"
         />
       </div>
     </div>
@@ -60,7 +60,7 @@ const store = useProductStore();
 const route = useRoute();
 const id = route.params.id
 const { products } = storeToRefs(store);
-const { getProducts, saveMoney, newPrice , monthlyPrice } = store;
+const { getProducts, getMoneySaved, getNewPrice, monthlyPrice } = store;
 
 
 //functions
