@@ -32,11 +32,14 @@
    @include font-style( $black, 10px, left);
    @include font-size($subheading, 32px);
 }
-.body-text, .body-text-red  {
+.body-text, .body-text-red, .body-text-green  {
    @include font-size($body-text,24px)
 }
 .body-text-red{
 	@include font-style( $red, 10px, left);
+}
+.body-text-green{
+	@include font-style( $green, 10px, left);
 }
 .body-text{
 	@include font-style( $black, 10px, left);
@@ -45,22 +48,4 @@
 
 
 
-// 	@media (max-width: 1024px)
-//    .heading, .brand-text
-//       @include font-size($heading-md, 38px)
-//    .subheading, .menu-item
-//       @include font-size($subheading-md, 28px)
-//    .body-text, .body-text-light
-//       @include font-size($body-text-md, 22px)
-//    .small-text
-//       @include font-size($body-text-small-md, 20px)
-// // small devices
-// @media (max-width: 767px)
-//    .heading, .brand-text
-//       @include font-size($heading-sm, 35px)
-//    .subheading, .menu-item
-//       @include font-size($subheading-sm, 26px)
-//    .body-text, .body-text-light
-//       @include font-size($body-text-sm, 20px)
-//    .small-text
-//       @include font-size($body-text-small-sm, 18px)  
+ 

@@ -31,7 +31,7 @@
     <!-- Prices blocks -->
     <div class="item__price">
       <div class="item__price-value">
-        <p class="small-text " :class="{ oneprice: onePrice }">
+        <p class="body-text " :class="{ oneprice: onePrice }">
           {{ price }} lei
         </p>
         <p class="body-text onePrice" :class="{ hidden: hidden }">

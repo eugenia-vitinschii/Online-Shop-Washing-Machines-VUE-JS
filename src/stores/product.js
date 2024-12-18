@@ -143,6 +143,9 @@ export const useProductStore = defineStore("productId", {
      getNewPrice(price){
       return (discount) => Math.floor(price - (price * discount) / 100);
      },
+    
+
+
 
    monthlyPrice(price){
       let totalPrice = Math.round(+price + (price * 40)/100)
