@@ -1,18 +1,18 @@
 <template>
-  <!--Product item for products page -->
+  <!--Product item for items page (all items list) -->
   <div class="item__item">
     <div class="item__top">
-      <div class="item__logo">
+      <div class="item__top-logo">
         <router-link :to="'/brand/' + brand" class="body-text">
             {{ brand }}
           </router-link>
       </div>
       <!-- labels for dicsount products -->
-      <div class="item_labels">
-        <div class="item__label" :class="{ visible: hugeSaleLabel }">
+      <div class="item__top-labels">
+        <div class="item__top-label" :class="{ visible: hugeSaleLabel }">
           <img src="@/assets/img/sale.jpg" alt="oops!" />
         </div>
-        <div class="item__label" :class="{ visible: dicountLabel }">
+        <div class="item__top-label" :class="{ visible: dicountLabel }">
           <img src="@/assets/img/discount.jpg" alt="oops!" />
         </div>
       </div>
@@ -20,7 +20,7 @@
     <!--Img and title links -->
     <div class="item__links">
       <router-link :to="'/product/' + id">
-        <div class="item__img">
+        <div class="item__links-img">
           <img :src="img" alt="no img" />
         </div>
       </router-link>
@@ -50,7 +50,7 @@
 
     <!-- Add to card & Favorite -->
     <div class="item__buttons">
-      <div class="item__credit">
+      <div class="item__buttons-credit">
         <p class="body-text">
           De la <span class="bold">{{ monthlyPrice }} lei </span> /lunar
         </p>

@@ -1,186 +1,142 @@
+// styles for items page (all products list)
 .item {
-   &__item{  
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
     @include item();
-   }
-   &__item:hover{
+  }
+  &__item:hover {
     @include itemHover();
     @include animations();
-   }
-   &__content{
-    // display: flex;
-   }
-   &__item,
-   .spaces {
-@include itemStyles()
-   }
-   &__top {
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
-     padding: 10px 10px;
-     align-items: center;
-     height: 50px;
-   }
-   &__logo {
-     height: 25px;
-     img {
-       height: 100%;
-     }
-   }
-   &__labels{
-   }
-   &__label {
-     height: 50px;
-     display: none;
-     border: 5px solid $orange;
-     border-radius: 50%;
-     @include animatePromo();
-     img {
-       border-radius: 50%;
-       height: 100%;
-     }
-   }
- 
-   &__label-txt {
-     text-align: center;
-     color: red;
-   }
-   &__links {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
-   &__img {
-     align-self: center;
-     width: 150px;
-     height: 220px;
-     overflow: hidden;
-    
-     img {
-       width: 100%;
-     }
-   }
-   &__price {
+  }
+  &__item,
+  .spaces {
+    @include itemStyles();
+  }
+  &__top {
+    //product logo & label
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 50px;
+  }
+  &__top-logo {
+    height: 25px;
+    img {
+      height: 100%;
+    }
+  }
+  &__top-label {
+    height: 50px;
+    display: none;
+    border: 5px solid $orange;
+    border-radius: 50%;
+    @include animatePromo();
+    img {
+      border-radius: 50%;
+      height: 100%;
+    }
+  }
+  &__links {
+    // img & item name link 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__links-img {
+    align-self: center;
+    width: 150px;
+    height: 220px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  &__price {
+    //prices block wrapper
     width: 100%;
     height: 40px;
-     display: flex;
-     justify-content: space-between;
-
-   }
-   &__price-value {
-   }
-   &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buttons {
     margin-top: $margin-top;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     background: transparent;
-    button{
+    button {
       background: transparent;
     }
-   }
- }
- 
- .price {
-   text-decoration: line-through;
- }
- 
- .new-price {
-   font-size: 20px;
-   color: rgb(189, 30, 30);
- }
- 
- .bold {
-   font-weight: bold;
- }
- .hidden{
-  display: none;
- }
- .visible {
-   display: block;
- }
- .brand{
-  text-transform: uppercase;
-   color: $black
- }
- .onePrice {
-   text-decoration: none;
-   font-weight: bold;
- }
+  }
+}
 
- .oldPrice{
+//additional classes for blocks
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+
+// old price style
+.oldPrice {
   text-decoration: line-through;
   font-weight: normal;
   color: gray;
- }
+}
+
+ 
+// item filter block
+.item__filter {
+  background: $white;
+}
 
 
 
- button {
-   background: $white;
- }
- #card {
-   fill: $dark-green;
-   height: 30px;
-   width: 30px;
-   @include  animations();
- }
- #card:hover {
-   fill: $orange;
-   height: 30px;
-   width: 30px;
- }
- #heart {
-  fill: $red;
-   opacity: 0.1;
-   margin-left: 60px;
-
- }
- #heart
- .active {
-  opacity: 1;
- }
- .getFavorite {
-   fill: red;
- }
- .heart {
+// product & item card styles
+#card {
   fill: $orange;
- }
-
- .spaces {
-   height: 1px;
-   padding: 1px;
-   background: transparent;
-   border: 0px solid transparent;
- }
-
-.redHeart{
+  height: 30px;
+  width: 30px;
+  @include animations();
+}
+#card:hover {
   fill: $orange;
+  height: 30px;
+  width: 30px;
 }
  
-
- .onePrice{
-  color: $black;
-  font-size: $body-text;
  
- }
 
-
- @media (max-width:667px){
-	.item {
-    &__item{
-
-	max-width: 350px;
-
+ 
+// spaces 
+.spaces {
+  height: 1px;
+  padding: 1px;
+  background: transparent;
+  border: 0px solid transparent;
 }
-}
- }
- @media (max-width:470px){
+
+ 
+ 
+// style for media
+@media (max-width: 667px) {
   .item {
-    &__item{
-    min-width: 100%;
-   margin: 10px  0px;
+    &__item {
+      max-width: 350px;
     }
   }
- }
+}
+@media (max-width: 470px) {
+  .item {
+    &__item {
+      min-width: 100%;
+      margin: 10px 0px;
+    }
+  }
+}

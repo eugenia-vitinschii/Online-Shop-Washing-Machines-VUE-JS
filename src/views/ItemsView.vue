@@ -231,19 +231,5 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-p {
-  color: white;
-}
-.item__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.cart-cont {
-  background: #ffffff;
-}
-
-.item__filter {
-  background: $white;
-}
+ 
 </style>
