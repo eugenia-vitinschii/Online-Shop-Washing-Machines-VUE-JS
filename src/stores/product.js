@@ -169,7 +169,7 @@ export const useProductStore = defineStore("productId", {
     }
   },
   showOnePrice(discount){
-    if(discount<  1 || discount > 99 ){
+    if(discount <  1 || discount > 99 ){
     return  true
   }
 },

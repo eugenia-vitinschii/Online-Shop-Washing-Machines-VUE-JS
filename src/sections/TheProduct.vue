@@ -253,7 +253,7 @@ defineProps({
     type: Boolean,
     default: false,
   },
-  onePrice: {
+  oldPrice: {
     type: Boolean,
     default: false,
   },

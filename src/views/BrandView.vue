@@ -20,7 +20,7 @@
             :economie="getMoneySaved(product.price)(product.discount)"
             :monthlyPrice="monthlyPrice(product.price)"
             :hidden="showPrices(product.discount)"
-            :onePrice="showOnePrice(product.discount)"
+            :oldPrice="showOnePrice(product.discount)"
             :dicountLabel="dicountLabel(product.discount)"
             :hugeSaleLabel="hugeSaleLabel(product.discount)"
             @addToCard="addProductCard(product)"

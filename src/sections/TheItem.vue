@@ -31,10 +31,10 @@
     <!-- Prices blocks -->
     <div class="item__price">
       <div class="item__price-value">
-        <p class="body-text " :class="{ oneprice: onePrice }">
+        <p class="body-text priceses" :class="{ oldPrice: oldPrice}">
           {{ price }} lei
         </p>
-        <p class="body-text onePrice" :class="{ hidden: hidden }">
+        <p class="body-text bold " :class="{ hidden: hidden }">
           {{ newPrice }} lei
         </p>
       </div>
@@ -121,7 +121,7 @@ defineProps({
     type: Boolean,
     default: false,
   },
-  onePrice: {
+  oldPrice: {
     type: Boolean,
     default: false,
   },
