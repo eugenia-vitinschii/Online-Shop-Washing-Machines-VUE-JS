@@ -109,11 +109,12 @@
  }
 
  .oldPrice{
- color: rgb(38, 64, 135);
+  text-decoration: line-through;
+  font-weight: normal;
+  color: gray;
  }
- .priceses{
 
- }
+
 
  button {
    background: $white;
