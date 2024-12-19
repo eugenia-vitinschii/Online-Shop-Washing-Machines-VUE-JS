@@ -9,12 +9,12 @@
    &__top {
       //product logo & label
       display: flex;
-      justify-content: start;
+      justify-content: space-between;
       align-items: center;
-      height: 50px;
+      height: 70px;
     }
     &__top-logo {
-      margin-right: 40px;
+ 
       height: 25px;
       img {
         height: 100%;

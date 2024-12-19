@@ -1,18 +1,19 @@
 <template>
-  <div class="filters">
+ 
+  <div class="item">
     <div class="container">
-      <div class="filters___button">
-        <button class="custom__button" @click="showFilter = !showFilter">
-          Filtrează
-        </button>
-      </div>
-      <div class="filters__wrapper" v-if="showFilter">
+      <div class="item__content">
+        <div class="item__wrapper">
+           <div class="item__filter">
+           <div class="filters">
+   
+      <div class="filters__wrapper"  >
         <div class="filers__brand">
-          <p class="heading">Sortează după producător</p>
-          <p class="subheading" v-if="store.allProducts < 28">
+          <p class="body-text bold">Sortează după producător</p>
+          <p class="body-text" v-if="store.allProducts < 28">
           Au fost găsite: {{ store.allProducts }} produse
         </p>
-          <div class="item__filter-content" v-if="showFilter">
+          <div class="item__filter-content" >
             <div class="checkbox-wrapper">
               <input
                 class="inp-cbx"
@@ -136,12 +137,10 @@
           </div>
         </div>
       </div>
-    </div>
+    
   </div>
-  <div class="item">
-    <div class="container">
-      <div class="item__content">
-        <div class="item__wrapper">
+        </div>
+        <div class="item__container">
           <the-item
             v-for="product in store.checkboxFilters"
             :key="product.id"
@@ -168,6 +167,8 @@
           <div class="spaces"></div>
           <div class="spaces"></div>
         </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -176,7 +177,7 @@
 <script setup>
 //vue
 import { defineOptions, watch } from "vue";
-import { onMounted, ref } from "vue";
+import { onMounted  } from "vue";
 
 //store
 import { storeToRefs } from "pinia";
@@ -205,7 +206,7 @@ const {
   showOnePrice,
 } = store;
 
-let showFilter = ref(false);
+ 
 
 // add product to cart
 function addProductCard(product) {
