@@ -1,5 +1,8 @@
 // popup item  from TheInfo component
 .modal {
+   svg, button{
+      background: $white;
+   }
    &__wrapper{
       position: fixed;
       display: flex;
@@ -22,6 +25,7 @@
    &__content:hover{ 
    }
    &__close{
+
       float: right;
       svg{
          fill: $orange;

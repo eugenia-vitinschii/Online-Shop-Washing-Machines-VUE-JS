@@ -1,5 +1,8 @@
 // for returnPolicy component
 .info {
+   svg, button{
+      background: $white;
+   }
    margin-top: 40px;
    &__item {
       display: flex;

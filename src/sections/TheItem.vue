@@ -55,7 +55,9 @@
           De la <span class="bold">{{ monthlyPrice }} lei </span> /lunar
         </p>
       </div>
+      <div class="item__buttons-action">
 
+      </div>
       <button @click="$emit('addToCard')">
         <svg id="card" class="" viewBox="0 0 576 512">
           <path

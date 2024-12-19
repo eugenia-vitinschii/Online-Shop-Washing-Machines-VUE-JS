@@ -32,6 +32,9 @@
           :monthlyPrice="monthlyPrice(products.price)"
           :newPrice="getNewPrice(products.price)(products.discount)"
           :economie="getMoneySaved(products.price)(products.discount)"
+         :dicountLabel="dicountLabel(products.discount)"
+            :hugeSaleLabel="hugeSaleLabel(products.discount)"
+           @addToCard="addProductCard(products)"
         />
       </div>
     </div>
@@ -60,7 +63,7 @@ const store = useProductStore();
 const route = useRoute();
 const id = route.params.id
 const { products } = storeToRefs(store);
-const { getProducts, getMoneySaved, getNewPrice, monthlyPrice } = store;
+const { getProducts, getMoneySaved, getNewPrice, monthlyPrice , addToCart,dicountLabel ,hugeSaleLabel} = store;
 
 
 //functions
@@ -74,7 +77,18 @@ function showOnePrice(products){
     return  true
   }
 }
- 
+ // add product to cart
+function addProductCard(products) {
+  addToCart({
+    id: products.id,
+    productCode: products.productCode,
+    productName: products.productName,
+    price: products.price,
+    discount: products.discount,
+    img: products.img,
+    brand: products.brand,
+  });
+}
 //hooks
 onMounted(() => {
   getProducts(id);

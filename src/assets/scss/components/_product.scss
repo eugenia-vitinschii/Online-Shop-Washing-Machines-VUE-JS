@@ -6,8 +6,31 @@
       @include itemHover();
       @include animations();
    }
-   // &__item {
-   // }
+   &__top {
+      //product logo & label
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 50px;
+    }
+    &__top-logo {
+      margin-right: 40px;
+      height: 25px;
+      img {
+        height: 100%;
+      }
+    }
+    &__top-label {
+      height: 50px;
+      display: none;
+      border: 5px solid $orange;
+      border-radius: 50%;
+      @include animatePromo();
+      img {
+        border-radius: 50%;
+        height: 100%;
+      }
+    }
    &__short {
       display: flex;
       justify-content: space-between;
@@ -23,16 +46,28 @@
       width: 100%;
       margin: $margin-top;
    }
-   // &__promo {
-   // }
+ 
 
-   // &__price {
-   // }
-   // &__price-value {
-   // }
+   &__price {
+      display: flex;
+      justify-content: start
+   }
+   &__price-value {
+      margin-right: 30px;
+   }
+   &__buttons{
+      
+   }
+   &__buttons-credit{
 
-   // &__credit {
-   // }
+   }
+   &__buttons-action{
+      margin-top: 10px;
+      svg, button{
+         background: $white;
+         margin-right: 10px;
+      }
+   }
    &__decription {
       display: flex;
       justify-content: space-between;
@@ -74,3 +109,10 @@
       }
    }
 }
+//additional classes for blocks
+.hidden {
+   display: none;
+ }
+ .visible {
+   display: block;
+ }
